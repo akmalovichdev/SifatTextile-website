@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "about": "О нас",
+    "products": "Наш продукт",
+    "services": "Наши услуги",
+    "whyUs": "Почему мы",
+    "geography": "География"
+  },
+  "hero": {
+    "title": "Надёжность\nКачество\nМеждународный опыт",
+    "subtitle": "Производим пряжу для будущего с заботой о каждой нити.",
+    "btnOrder": "Оставить заявку",
+    "btnProducts": "Продукция →"
+  },
+  "about": {
+    "title": "О нас"
+  },
+  "products": {
+    "title": "Наш продукт",
+    "search": "Поиск продуктов...",
+    "viewMore": "Подробнее",
+    "features": "Особенности",
+    "showAll": "Показать всё",
+    "hideAll": "Скрыть всё"
+  },
+  "whyUs": {
+    "title": "Почему мы"
+  },
+  "productions": {
+    "title": "Наши производства"
+  },
+  "news": {
+    "title": "Новости"
+  },
+  "contact": {
+    "title": "Свяжитесь с нами"
+  },
+  "geography": {
+    "title": "География"
+  },
+  "gallery": {
+    "title": "Галерея"
+  },
+  "services": {
+    "title": "Наши услуги",
+    "factoryYarn": "Фабрика основной пряжи",
+    "factoryFeather": "Фабрика перьевой пряжи",
+    "factoryCovered": "Фабрика крытой пряжи",
+    "factoryMixed": "Фабрика смеcевой пряжи",
+    "factoryNylon": "Фабрика нейлоновой пряжи",
+    "factoryWool": "Фабрика шерстяной пряжи",
+    "factoryPolyester": "Фабрика полиэфирной пряжи",
+    "contactBtn": "Свяжитесь с нами",
+    "getPrice": "Узнайте стоимость сегодня",
+    "contactSales": "Обратитесь в наш отдел продаж",
+    "formName": "Имя",
+    "formEmail": "Электронный адрес",
+    "formCompany": "Название компании",
+    "formPhone": "Телефон",
+    "formComment": "Комментарий",
+    "formSubmit": "Отправить запрос сейчас"
+  },
+  "footer": {
+    "quickLinks": "Быстрые ссылки",
+    "surxon": "Surxon Sifat Tekstil",
+    "maroqand": "Maroqand Sifat Tekstil",
+    "kamalak": "Kamalak Tekstil",
+    "carded": "Кардная",
+    "combed": "Гребенная",
+    "lycra": "Лайкру",
+    "oe": "OE",
+    "slub": "Slub",
+    "call": "Позвонить"
+  },
+  "surxon": {
+    "title": "Surxon"
+  },
+  "maroqand": {
+    "title": "Maroqand"
+  },
+  "kamalak": {
+    "title": "Kamalak"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "about": "About Us",
+    "products": "Our Products",
+    "services": "Our Services",
+    "whyUs": "Why Us",
+    "geography": "Geography"
+  },
+  "hero": {
+    "title": "Reliability\nQuality\nInternational Experience",
+    "subtitle": "We produce yarn for the future with care for every thread.",
+    "btnOrder": "Place Order",
+    "btnProducts": "Products →"
+  },
+  "about": {
+    "title": "About Us"
+  },
+  "products": {
+    "title": "Our Products",
+    "search": "Search products...",
+    "viewMore": "View Details",
+    "features": "Features",
+    "showAll": "Show All",
+    "hideAll": "Hide All"
+  },
+  "whyUs": {
+    "title": "Why Us"
+  },
+  "productions": {
+    "title": "Our Productions"
+  },
+  "news": {
+    "title": "News"
+  },
+  "contact": {
+    "title": "Contact Us"
+  },
+  "geography": {
+    "title": "Geography"
+  },
+  "gallery": {
+    "title": "Gallery"
+  },
+  "services": {
+    "title": "Our Services",
+    "factoryYarn": "Main Yarn Factory",
+    "factoryFeather": "Feather Yarn Factory",
+    "factoryCovered": "Covered Yarn Factory",
+    "factoryMixed": "Mixed Yarn Factory",
+    "factoryNylon": "Nylon Yarn Factory",
+    "factoryWool": "Wool Yarn Factory",
+    "factoryPolyester": "Polyester Yarn Factory",
+    "contactBtn": "Contact Us",
+    "getPrice": "Get Price Today",
+    "contactSales": "Contact Our Sales Department",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formCompany": "Company Name",
+    "formPhone": "Phone",
+    "formComment": "Comment",
+    "formSubmit": "Submit Request Now"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "surxon": "Surxon Sifat Textile",
+    "maroqand": "Maroqand Sifat Textile",
+    "kamalak": "Kamalak Textile",
+    "carded": "Carded",
+    "combed": "Combed",
+    "lycra": "Lycra",
+    "oe": "OE",
+    "slub": "Slub",
+    "call": "Call"
+  },
+  "surxon": {
+    "title": "Surxon"
+  },
+  "maroqand": {
+    "title": "Maroqand"
+  },
+  "kamalak": {
+    "title": "Kamalak"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "about": "Biz haqimizda",
+    "products": "Bizning mahsulotlar",
+    "services": "Bizning xizmatlar",
+    "whyUs": "Nima uchun biz",
+    "geography": "Geografiya"
+  },
+  "hero": {
+    "title": "Ishonchlilik\nSifat\nXalqaro tajriba",
+    "subtitle": "Biz kelajak uchun ip ishlab chiqaramiz, har bir ip uchun g'amxo'rlik bilan.",
+    "btnOrder": "Buyurtma bering",
+    "btnProducts": "Mahsulotlar →"
+  },
+  "about": {
+    "title": "Biz haqimizda"
+  },
+  "products": {
+    "title": "Bizning mahsulotlar",
+    "search": "Mahsulotlarni qidirish...",
+    "viewMore": "Batafsil",
+    "features": "Xususiyatlar",
+    "showAll": "Hammasini ko'rsatish",
+    "hideAll": "Yashirish"
+  },
+  "whyUs": {
+    "title": "Nima uchun biz"
+  },
+  "productions": {
+    "title": "Bizning ishlab chiqarishlar"
+  },
+  "news": {
+    "title": "Yangiliklar"
+  },
+  "contact": {
+    "title": "Biz bilan bog'lanish"
+  },
+  "geography": {
+    "title": "Geografiya"
+  },
+  "gallery": {
+    "title": "Galereya"
+  },
+  "services": {
+    "title": "Bizning xizmatlar",
+    "factoryYarn": "Asosiy ip fabrikasi",
+    "factoryFeather": "Pat ip fabrikasi",
+    "factoryCovered": "Yopilgan ip fabrikasi",
+    "factoryMixed": "Aralash ip fabrikasi",
+    "factoryNylon": "Naylon ip fabrikasi",
+    "factoryWool": "Jun ip fabrikasi",
+    "factoryPolyester": "Poliester ip fabrikasi",
+    "contactBtn": "Biz bilan bog'laning",
+    "getPrice": "Bugun narxni biling",
+    "contactSales": "Savdo bo'limimizga murojaat qiling",
+    "formName": "Ism",
+    "formEmail": "Elektron pochta",
+    "formCompany": "Kompaniya nomi",
+    "formPhone": "Telefon",
+    "formComment": "Izoh",
+    "formSubmit": "So'rovni hoziroq yuborish"
+  },
+  "footer": {
+    "quickLinks": "Tezkor havolalar",
+    "surxon": "Surxon Sifat Tekstil",
+    "maroqand": "Maroqand Sifat Tekstil",
+    "kamalak": "Kamalak Tekstil",
+    "carded": "Kardli",
+    "combed": "Taroqli",
+    "lycra": "Lykra",
+    "oe": "OE",
+    "slub": "Slub",
+    "call": "Qo'ng'iroq qilish"
+  },
+  "surxon": {
+    "title": "Surxon"
+  },
+  "maroqand": {
+    "title": "Maroqand"
+  },
+  "kamalak": {
+    "title": "Kamalak"
+  }
+}

@@ -1,10 +1,11 @@
+"use client";
 import React, { useState, useEffect } from "react";
-
+import { useLanguage } from "@/context/LanguageContext";
 
 const News = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
-
+  const { t } = useLanguage();
   const [news, setnews] = useState([]);
 
   useEffect(() => {
@@ -34,7 +35,7 @@ const News = () => {
   return (
     <section className="max-w-[1920px] mx-auto px-5 sm:px-5 md:px-7 lg:px-[50px] 2xl:px-[100px] bg-gray-50  py-12 sm:py-16 ">
       <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 sm:mb-12 text-black">
-        Новости
+        {t("news.title")}
       </h2>
 
       <div className="flex flex-col items-center gap-6 sm:gap-8">

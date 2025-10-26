@@ -1,7 +1,9 @@
+"use client";
 import React, { useState, useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const WhyUs = () => {
-
+    const { t } = useLanguage();
     const [whyUs, setwhyUs] = useState(null);
 
     useEffect(() => {
@@ -18,17 +20,14 @@ const WhyUs = () => {
             <section id="WhyUs" className="py-16 md:py-24 bg-[#005E77] text-white">
                 <div className="max-w-[1920px] mx-auto px-5 sm:px-5 md:px-7 lg:px-[50px] 2xl:px-[100px]">
                     <h2 className="text-3xl md:text-4xl font-bold mb-[60px] text-center md:text-left">
-                        Почему мы
+                        {t("whyUs.title")}
                     </h2>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                         {/* Левая часть */}
                         <div className="space-y-[50px]">
-                            <p className="text-white/90 leading-relaxed text-base sm:text-lg md:text-xl font-normal">
-                                Высокое качество текстильной продукции по международным стандартам.
-                                <br />
-                                Siyob Group Textile использует современные технологии производства и строгий контроль
-                                качества, благодаря чему клиенты получают продукцию, соответствующую мировым требованиям.
+                            <p className="text-white/90 leading-relaxed text-base sm:text-lg md:text-xl font-normal whitespace-pre-line">
+                                {t("whyUs.mainText")}
                             </p>
 
                             <div className="relative rounded-lg overflow-hidden aspect-video w-full max-w-[793px] mx-auto md:mx-0">
@@ -55,23 +54,23 @@ const WhyUs = () => {
                             {[
                                 {
                                     img: "/Icons/vector.png",
-                                    text: "Качество — только проверенное сырьё и строгий контроль на всех этапах.",
+                                    text: t("whyUs.quality"),
                                 },
                                 {
                                     img: "/Icons/vector-1.png",
-                                    text: "Надёжность — долгосрочные партнёрские отношения и соблюдение сроков поставок.",
+                                    text: t("whyUs.reliability"),
                                 },
                                 {
                                     img: "/Icons/vector-4.png",
-                                    text: "Открытость — честные условия и прозрачное сотрудничество с клиентами и партнёрами.",
+                                    text: t("whyUs.openness"),
                                 },
                                 {
                                     img: "/Icons/vector-2.png",
-                                    text: "Надёжные сроки поставки – выстроенная логистика и опытный менеджмент гарантируют своевременную доставку продукции.",
+                                    text: t("whyUs.delivery"),
                                 },
                                 {
                                     img: "/Icons/vector-3.png",
-                                    text: "Международное доверие – Siyob Group Textile сотрудничает с зарубежными партнёрами и уже зарекомендовала себя как стабильный и надёжный производитель.",
+                                    text: t("whyUs.international"),
                                 },
                             ].map(({ img, text }, i) => (
                                 <div key={i} className="flex gap-4 items-start">

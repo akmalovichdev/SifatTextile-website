@@ -1,24 +1,28 @@
-import React from 'react'
-
-const facilities = [
-    {
-        title: "SURXON SIFAT TEKSTIL",
-        description: "Специализируется на пряже KCD и KCM.",
-        image: "/OurProductions/OurProductions_1.png",
-    },
-    {
-        title: "MAROQAND SIFAT TEKSTIL",
-        description: "Производит широкий ассортимент: Carded Ring Spun, Open End, Slub yarn, Lycra и Dual Core",
-        image: "/OurProductions/OurProductions_2.png",
-    },
-    {
-        title: "KAMALAK TEKSTIL",
-        description: "Ориентирована на пряжу KCD и KW.",
-        image: "/OurProductions/OurProductions_3.png",
-    },
-]
+"use client";
+import React from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const OurProductions = () => {
+    const { t } = useLanguage();
+    
+    const facilities = [
+        {
+            title: t("footer.surxon"),
+            description: t("productions.surxonDesc"),
+            image: "/OurProductions/OurProductions_1.png",
+        },
+        {
+            title: t("footer.maroqand"),
+            description: t("productions.maroqandDesc"),
+            image: "/OurProductions/OurProductions_2.png",
+        },
+        {
+            title: t("footer.kamalak"),
+            description: t("productions.kamalakDesc"),
+            image: "/OurProductions/OurProductions_3.png",
+        },
+    ];
+    
     return (
         <div>
             <main className=" bg-gray-50 pb-16 px-4">
@@ -26,7 +30,7 @@ const OurProductions = () => {
                     <div className="flex flex-col items-center relative">
 
                         <h1 className="text-3xl md:text-4xl font-bold text-center mb-[70px] mt-[140px]">
-                            Наши производства
+                            {t("productions.title")}
                         </h1>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 justify-items-center">
@@ -59,7 +63,7 @@ const OurProductions = () => {
                                                 className=" w-[141px] sm:w-[165px] h-[50px] sm:h-[54px] border border-[#005E77] text-[#005E77] text-[15px] sm:text-[16px] font-semibold rounded-[10px]
                              bg-transparent hover:bg-[#f3fef9] transition-all duration-300 active:scale-[0.98]"
                                             >
-                                                Подробнее
+                                                {t("productions.viewMore")}
                                             </button>
                                         </div>
                                     </div>

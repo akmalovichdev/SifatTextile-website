@@ -9,8 +9,11 @@ import {
     FaYoutube,
     FaGoogle,
 } from "@/index";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Footer = ({ setActiveSection }) => {
+    const { t } = useLanguage();
+    
     return (
         <footer
             className="py-10"
@@ -70,17 +73,17 @@ const Footer = ({ setActiveSection }) => {
 
                 {/* --- Быстрые ссылки --- */}
                 <div>
-                    <p className="font-semibold text-lg mb-[22px]">Быстрые ссылки</p>
+                    <p className="font-semibold text-lg mb-[22px]">{t("footer.quickLinks")}</p>
                     <div className="flex flex-col gap-[6px] text-white">
                         {[
-                            { name: "Surxon Sifat Tekstil", key: "Surxon" },
-                            { name: "Maroqand Sifat Tekstil", key: "Maroqand" },
-                            { name: "Kamalak Tekstil", key: "Kamalak" },
-                            { name: "Кардная", key: null },
-                            { name: "Гребенная", key: null },
-                            { name: "Лайкру", key: null },
-                            { name: "OE", key: null },
-                            { name: "Slub", key: null },
+                            { name: t("footer.surxon"), key: "Surxon" },
+                            { name: t("footer.maroqand"), key: "Maroqand" },
+                            { name: t("footer.kamalak"), key: "Kamalak" },
+                            { name: t("footer.carded"), key: null },
+                            { name: t("footer.combed"), key: null },
+                            { name: t("footer.lycra"), key: null },
+                            { name: t("footer.oe"), key: null },
+                            { name: t("footer.slub"), key: null },
                         ].map(({ name, key }, i) => (
                             <p
                                 key={i}

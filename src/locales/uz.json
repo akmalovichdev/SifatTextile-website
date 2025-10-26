@@ -13,7 +13,10 @@
     "btnProducts": "Mahsulotlar →"
   },
   "about": {
-    "title": "Biz haqimizda"
+    "title": "Biz haqimizda",
+    "description1": "Siyob Group Tekstil - Samarqanddan kelib chiqqan, paxta ipi ishlab chiqarishga ixtisoslashgan dinamik rivojlanayotgan to'qimachilik kompaniyasi. Biz bitta tizimda ishlaydigan uchta zamonaviy fabrikani birlashtiramiz va mahalliy hamda xalqaro bozorlarda talabga ega bo'lgan mahsulotlarni ishlab chiqarishga imkon beradi.",
+    "description2": "Fabrikalarimizning har biri yetakchi dunyo ishlab chiqaruvchilarining jihozlari bilan jihozlangan, bu barqaror sifat va mahsulotning xalqaro me'yoriy talablarga mosligini ta'minlaydi. Biz turli to'qimachilik sanoati segmentlari uchun keng doiradagi paxta iplarini ishlab chiqaramiz - trikotajdan tortib premium matolargacha. Muvaffaqiyat uchta omilning kombinatsiyasiga asoslanadi: sifatli xom ashyo, zamonaviy texnologiya va professional yondashuv.",
+    "btnLearn": "Ko'proq biling"
   },
   "products": {
     "title": "Bizning mahsulotlar",
@@ -24,22 +27,37 @@
     "hideAll": "Yashirish"
   },
   "whyUs": {
-    "title": "Nima uchun biz"
+    "title": "Nima uchun biz",
+    "mainText": "Xalqaro standartlar bo'yicha yuqori sifatli to'qimachilik mahsulotlari.\nSiyob Group Tekstil zamonaviy ishlab chiqarish texnologiyasi va qat'iy sifat\nkontrolidan foydalanadi, bu mijozlarga dunyo talablariga javob beradigan mahsulotlar olish imkonini beradi.",
+    "quality": "Sifat - faqat tasdiqlangan xom ashyo va barcha bosqichlarda qat'iy nazorat.",
+    "reliability": "Ishonchlilik - uzoq muddatli hamkorlik va yetkazib berish muddatlariga rioya qilish.",
+    "openness": "Ochiklik - shaffof shartlar va mijozlar va hamkorlar bilan shaffof hamkorlik.",
+    "delivery": "Ishonchli yetkazib berish muddatlari - qurilgan logistika va tajribali boshqaruv mahsulotning o'z vaqtida yetkazib berilishini kafolatlaydi.",
+    "international": "Xalqaro ishonch - Siyob Group Tekstil xorijiy hamkorlar bilan hamkorlik qiladi va o'zini barqaror va ishonchli ishlab chiqaruvchi sifatida ko'rsatgan."
   },
   "productions": {
-    "title": "Bizning ishlab chiqarishlar"
+    "title": "Bizning ishlab chiqarishlar",
+    "viewMore": "Batafsil",
+    "surxonDesc": "KCD va KCM ipiga ixtisoslashgan.",
+    "maroqandDesc": "Keng assortiment ishlab chiqaradi: Carded Ring Spun, Open End, Slub yarn, Lycra va Dual Core",
+    "kamalakDesc": "KCD va KW ipiga qaratilgan."
   },
   "news": {
     "title": "Yangiliklar"
   },
   "contact": {
-    "title": "Biz bilan bog'lanish"
+    "title": "Biz bilan bog'lanish",
+    "text": "To'qimachilik ishlab chiqarishingiz uchun yechim kerakmi?",
+    "btn": "Biz bilan bog'laning"
   },
   "geography": {
-    "title": "Geografiya"
+    "title": "Geografiya",
+    "text": "Siyob Group Tekstil mahsulotlari ichki bozorga muvaffaqiyatli yetkazib berilmoqda va 10 dan ortiq mamlakatlarga eksport qilinmoqda, jumladan: Xitoy, Hindiston, Pokiston, Eron, Misr, Turkiya va Yevropa mamlakatlari. Bu bizning brendimizga xalqaro hamkorlarning yuqori raqobatbardoshligi va ishonchini tasdiqlaydi."
   },
   "gallery": {
-    "title": "Galereya"
+    "title": "Galereya",
+    "showAll": "Hammasini ko'rsatish",
+    "hideAll": "Yashirish"
   },
   "services": {
     "title": "Bizning xizmatlar",

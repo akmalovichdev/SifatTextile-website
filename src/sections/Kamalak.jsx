@@ -1,6 +1,9 @@
+"use client";
 import React, { useState, useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Kamalak = () => {
+  const { t } = useLanguage();
   const [kamalak, setkamalak] = useState([]);
 
   useEffect(() => {
@@ -53,7 +56,7 @@ const Kamalak = () => {
             text-sm sm:text-lg md:text-xl font-medium mt-[40px] sm:mt-[55px]
             whitespace-nowrap transition-all duration-300"
               >
-                Свяжитесь с нами
+                {t("contact.btn")}
               </button>
             </div>
           </div>

@@ -1,6 +1,10 @@
-import React from 'react'
+"use client";
+import React from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const AboutUs = () => {
+  const { t } = useLanguage();
+  
   return (
     <div>
       <section id="AboutUs" className=" bg-white">
@@ -49,20 +53,20 @@ const AboutUs = () => {
 
             {/* Текстовая часть */}
             <div className="flex flex-col justify-center space-y-6 md:space-y-8">
-              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-medium text-black">О нас</h2>
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-medium text-black">{t("about.title")}</h2>
 
               <div className="space-y-6 text-black leading-relaxed text-base sm:text-base font-normal md:text-xl xl:text-2xl ">
                 <p>
-                  Siyob Group Textile — это динамично развивающаяся текстильная компания из Самарканда, специализирующаяся на производстве хлопковой пряжи. Мы объединяем три современные фабрики, которые работают в единой системе и позволяют выпускать продукцию, востребованную как на внутреннем, так и на международном рынках.
+                  {t("about.description1")}
                 </p>
                 <p>
-                  Каждая из наших фабрик оснащена оборудованием ведущих мировых производителей, что обеспечивает стабильное качество и соответствие продукции международным стандартам. Мы производим широкий ассортимент хлопковой пряжи для разных сегментов текстильной промышленности — от трикотажа до тканей премиального уровня. Мы верим, что успех строится на сочетании трёх факторов: качественного сырья, современных технологий и профессионального подхода.
+                  {t("about.description2")}
                 </p>
               </div>
 
               <div className='text-center'>
                 <button className="w-auto sm:w-auto md:w-[230px] xl:w-[300px] xl:h-[80px] xl:text-2xl bg-[#0BBD83] text-white h-[54px] md:h-[70px]  px-6 text-xl font-semibold rounded-[10px] hover:bg-[#0aa775] transition duration-300">
-                  Узнать больше
+                  {t("about.btnLearn")}
                 </button>
               </div>
             </div>

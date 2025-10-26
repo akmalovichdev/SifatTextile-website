@@ -13,7 +13,10 @@
     "btnProducts": "Products →"
   },
   "about": {
-    "title": "About Us"
+    "title": "About Us",
+    "description1": "Siyob Group Textile is a dynamically developing textile company from Samarkand, specializing in cotton yarn production. We unite three modern factories that work in a unified system and allow us to produce goods in demand both in domestic and international markets.",
+    "description2": "Each of our factories is equipped with equipment from leading world manufacturers, ensuring stable quality and product compliance with international standards. We produce a wide range of cotton yarns for different segments of the textile industry - from knitwear to premium fabrics. We believe that success is built on a combination of three factors: quality raw materials, modern technology and a professional approach.",
+    "btnLearn": "Learn More"
   },
   "products": {
     "title": "Our Products",
@@ -24,22 +27,37 @@
     "hideAll": "Hide All"
   },
   "whyUs": {
-    "title": "Why Us"
+    "title": "Why Us",
+    "mainText": "High quality textile products by international standards.\nSiyob Group Textile uses modern production technology and strict quality\ncontrol, which allows customers to receive products that meet world requirements.",
+    "quality": "Quality - only verified raw materials and strict control at all stages.",
+    "reliability": "Reliability - long-term partnerships and compliance with delivery dates.",
+    "openness": "Openness - honest terms and transparent cooperation with clients and partners.",
+    "delivery": "Reliable delivery times - built logistics and experienced management guarantee timely product delivery.",
+    "international": "International trust - Siyob Group Textile cooperates with foreign partners and has proven itself as a stable and reliable manufacturer."
   },
   "productions": {
-    "title": "Our Productions"
+    "title": "Our Productions",
+    "viewMore": "View Details",
+    "surxonDesc": "Specializes in KCD and KCM yarn.",
+    "maroqandDesc": "Produces a wide range: Carded Ring Spun, Open End, Slub yarn, Lycra and Dual Core",
+    "kamalakDesc": "Focuses on KCD and KW yarn."
   },
   "news": {
     "title": "News"
   },
   "contact": {
-    "title": "Contact Us"
+    "title": "Contact Us",
+    "text": "Need solutions for your textile production?",
+    "btn": "Contact Us"
   },
   "geography": {
-    "title": "Geography"
+    "title": "Geography",
+    "text": "Siyob Group Textile products are successfully supplied to the domestic market and exported to more than 10 countries, including: China, India, Pakistan, Iran, Egypt, Turkey and European countries. This confirms the high competitiveness and trust of international partners in our brand."
   },
   "gallery": {
-    "title": "Gallery"
+    "title": "Gallery",
+    "showAll": "Show All",
+    "hideAll": "Hide"
   },
   "services": {
     "title": "Our Services",

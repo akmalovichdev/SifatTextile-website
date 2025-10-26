@@ -1,6 +1,9 @@
+"use client";
 import React, { useState, useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Gallery = () => {
+  const { t } = useLanguage();
   const [isMobile, setIsMobile] = useState(false);
   const [showAll, setShowAll] = useState(false);
 
@@ -18,7 +21,7 @@ const Gallery = () => {
       <div className="max-w-[1920px] mx-auto">
         {/* Заголовок */}
         <p className="text-black font-medium text-[32px] sm:text-[36px] md:text-[40px] text-center mb-[50px] sm:mb-[70px]">
-          Галерея
+          {t("gallery.title")}
         </p>
 
         {/* ГАЛЕРЕЯ */}
@@ -106,7 +109,7 @@ const Gallery = () => {
                 hover:bg-[#007b99]
               "
             >
-              {showAll ? "Скрыть" : "Показать все"}
+              {showAll ? t("gallery.hideAll") : t("gallery.showAll")}
             </button>
           </div>
         )}

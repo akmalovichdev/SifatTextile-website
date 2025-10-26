@@ -1,9 +1,11 @@
 "use client"
 
 import React, { useState, useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 
 export default function ServicesSection() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,13 +27,13 @@ export default function ServicesSection() {
   const [isFormVisible, setIsFormVisible] = useState(false)
 
   const services = [
-    "Фабрика основной пряжи",
-    "Фабрика перьевой пряжи",
-    "Фабрика крытой пряжи",
-    "Фабрика смеcевой пряжи",
-    "Фабрика нейлоновой пряжи",
-    "Фабрика шерстяной пряжи",
-    "Фабрика полиэфирной пряжи",
+    t("services.factoryYarn"),
+    t("services.factoryFeather"),
+    t("services.factoryCovered"),
+    t("services.factoryMixed"),
+    t("services.factoryNylon"),
+    t("services.factoryWool"),
+    t("services.factoryPolyester"),
   ]
 
   const processBlocks = [
@@ -92,7 +94,7 @@ export default function ServicesSection() {
     <div className="bg-white">
       <section id="OurServises" className="max-w-[1920px] mx-auto px-3 sm:px-4 py-8 sm:py-16 pt-[80px] sm:pt-[150px]">
         <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-14 text-gray-900">
-          Наши услуги
+          {t("services.title")}
         </h1>
 
         <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-10 sm:mb-[70px]">
@@ -145,13 +147,13 @@ export default function ServicesSection() {
               ))}
             </ul>
 
-            <button
+              <button
               className="bg-[#0BBD83] hover:bg-teal-700 text-white 
              px-5 py-3 sm:px-6 sm:py-4 rounded-[10px] 
              text-sm sm:text-lg md:text-xl font-medium mt-5 sm:mt-[55px]
              whitespace-nowrap"
             >
-              Свяжитесь с нами
+              {t("services.contactBtn")}
             </button>
           </div>
 
@@ -192,14 +194,14 @@ export default function ServicesSection() {
               rounded-2xl p-6 shadow-xl ml-auto mr-[4%]"
           >
             <h3 className="text-lg md:text-xl font-semibold text-black mb-3">
-              Узнайте стоимость сегодня
+              {t("services.getPrice")}
             </h3>
             <p className="text-base md:text-xl font-normal text-black mb-5">
-              Обратитесь в наш отдел продаж
+              {t("services.contactSales")}
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-3">
-              {["Имя", "Электронный адрес", "Название компании", "Телефон"].map(
+              {[t("services.formName"), t("services.formEmail"), t("services.formCompany"), t("services.formPhone")].map(
                 (placeholder, i) => {
                   const key = ["name", "email", "company", "phone"][i]
                   return (
@@ -217,7 +219,7 @@ export default function ServicesSection() {
                 }
               )}
               <textarea
-                placeholder="Комментарий"
+                placeholder={t("services.formComment")}
                 value={formData.comments}
                 onChange={(e) =>
                   setFormData({ ...formData, comments: e.target.value })
@@ -230,7 +232,7 @@ export default function ServicesSection() {
                 className="text-center w-full h-[50px] bg-[#0BBD83] hover:bg-teal-700 text-white 
                 rounded-[10px] text-base md:text-lg font-medium transition-all"
               >
-                Отправить запрос сейчас
+                {t("services.formSubmit")}
               </button>
             </form>
           </div>
@@ -247,14 +249,14 @@ export default function ServicesSection() {
                 </button>
 
                 <h3 className="text-lg sm:text-xl font-semibold text-black mb-3">
-                  Узнайте стоимость сегодня
+                  {t("services.getPrice")}
                 </h3>
                 <p className="text-base sm:text-xl font-normal text-black mb-5">
-                  Обратитесь в наш отдел продаж
+                  {t("services.contactSales")}
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-3">
-                  {["Имя", "Электронный адрес", "Название компании", "Телефон"].map(
+                  {[t("services.formName"), t("services.formEmail"), t("services.formCompany"), t("services.formPhone")].map(
                     (placeholder, i) => {
                       const key = ["name", "email", "company", "phone"][i]
                       return (
@@ -272,7 +274,7 @@ export default function ServicesSection() {
                     }
                   )}
                   <textarea
-                    placeholder="Комментарий"
+                    placeholder={t("services.formComment")}
                     value={formData.comments}
                     onChange={(e) =>
                       setFormData({ ...formData, comments: e.target.value })
@@ -285,7 +287,7 @@ export default function ServicesSection() {
                     className="text-center w-full h-[50px] bg-[#0BBD83] hover:bg-teal-700 text-white 
                     rounded-[10px] text-base sm:text-lg font-medium transition-all"
                   >
-                    Отправить запрос сейчас
+                    {t("services.formSubmit")}
                   </button>
                 </form>
               </div>

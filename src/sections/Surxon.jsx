@@ -1,7 +1,9 @@
+"use client";
 import React, { useState, useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Surxon = () => {
-
+    const { t } = useLanguage();
     const [surxon, setsurxon] = useState([]);
 
     useEffect(() => {
@@ -59,7 +61,7 @@ const Surxon = () => {
             text-sm sm:text-lg md:text-xl font-medium mt-[40px] sm:mt-[55px]
             whitespace-nowrap transition-all duration-300"
                             >
-                                Свяжитесь с нами
+                                {t("contact.btn")}
                             </button>
                         </div>
                     </div>

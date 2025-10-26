@@ -1,9 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import { FaPhone, FaBars, FaTimes } from "@index";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Header = ({ setActiveSection }) => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [langMenuOpen, setLangMenuOpen] = useState(false);
+    const { t, language, changeLanguage } = useLanguage();
 
     const handleScroll = (id) => {
         const section = document.getElementById(id);
@@ -14,11 +17,11 @@ const Header = ({ setActiveSection }) => {
     };
 
     const navItems = [
-        { name: "О нас", id: "AboutUs" },
-        { name: "Наш продукт", id: "OurProduct" },
-        { name: "Наши услуги", id: "OurServises" },
-        { name: "Почему мы", id: "WhyUs" },
-        { name: "География", id: "Geography" },
+        { name: t("nav.about"), id: "AboutUs" },
+        { name: t("nav.products"), id: "OurProduct" },
+        { name: t("nav.services"), id: "OurServises" },
+        { name: t("nav.whyUs"), id: "WhyUs" },
+        { name: t("nav.geography"), id: "Geography" },
     ];
 
     return (
@@ -43,7 +46,7 @@ const Header = ({ setActiveSection }) => {
                 {/* Навигация (Desktop) */}
                 <nav className="hidden lg:flex items-center gap-[10px] lg:gap-[20px] xl:gap-[30px]">
                     {navItems.map((item, i) =>
-                        item.name === "Наши услуги" ? (
+                        item.id === "OurServises" ? (
                             <button
                                 key={i}
                                 onClick={() => {
@@ -69,6 +72,33 @@ const Header = ({ setActiveSection }) => {
                         )
                     )}
 
+                    {/* Переключатель языка */}
+                    <div className="relative">
+                        <button
+                            onClick={() => setLangMenuOpen(!langMenuOpen)}
+                            className="text-white text-xs lg:text-base xl:text-lg font-medium px-3 py-1 rounded hover:bg-white/10 transition-all"
+                        >
+                            {language.toUpperCase()}
+                        </button>
+                        
+                        {langMenuOpen && (
+                            <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg overflow-hidden">
+                                {['ru', 'en', 'uz'].filter(lang => lang !== language).map((lang) => (
+                                    <button
+                                        key={lang}
+                                        onClick={() => {
+                                            changeLanguage(lang);
+                                            setLangMenuOpen(false);
+                                        }}
+                                        className="block w-full px-4 py-2 text-left text-gray-800 hover:bg-gray-100 transition-colors"
+                                    >
+                                        {lang.toUpperCase()}
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
                     <a href="">
                         <FaPhone className="w-[36px] sm:w-[42px] xl:w-[46px] h-[34px] sm:h-[38px] xl:h-[40px] py-[6px] px-[10px] border-2 rounded-[10px] text-white hover:bg-white hover:text-[#0BBD83] transition-all duration-300" />
                     </a>
@@ -90,7 +120,7 @@ const Header = ({ setActiveSection }) => {
             >
                 <nav className="flex flex-col items-center gap-6 py-6">
                     {navItems.map((item, i) =>
-                        item.name === "Наши услуги" ? (
+                        item.id === "OurServises" ? (
                             <button
                                 key={i}
                                 onClick={() => {
@@ -116,11 +146,30 @@ const Header = ({ setActiveSection }) => {
                         )
                     )}
 
+                    {/* Переключатель языка для мобильных */}
+                    <div className="flex items-center gap-2">
+                        {['ru', 'en', 'uz'].map((lang) => (
+                            <button
+                                key={lang}
+                                onClick={() => {
+                                    changeLanguage(lang);
+                                }}
+                                className={`px-3 py-1 rounded text-base ${
+                                    lang === language
+                                        ? 'bg-white text-[#0BBD83]'
+                                        : 'bg-transparent border border-white'
+                                }`}
+                            >
+                                {lang.toUpperCase()}
+                            </button>
+                        ))}
+                    </div>
+
                     <a
                         href=""
                         className="flex items-center gap-2 text-lg sm:text-xl border border-white px-5 py-2 rounded-lg hover:bg-white hover:text-[var(--main-color)] transition-all duration-300"
                     >
-                        <FaPhone /> Позвонить
+                        <FaPhone /> {t("footer.call")}
                     </a>
                 </nav>
             </div>

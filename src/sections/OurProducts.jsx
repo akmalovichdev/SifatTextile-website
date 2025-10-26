@@ -1,10 +1,12 @@
+"use client";
 import React, { useState, useEffect } from "react";
-
+import { useLanguage } from "@/context/LanguageContext";
 
 const OurProducts = () => {
     const [showAll, setShowAll] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const [products, setProducts] = useState([]);
+    const { t } = useLanguage();
 
     useEffect(() => {
       // Имитируем запрос к базе данных через API
@@ -32,13 +34,13 @@ const OurProducts = () => {
                     {/* Заголовок и фильтры */}
                     <div className="text-center mb-12">
                         <h2 className="text-[34px] sm:text-[38px] md:text-[40px] font-medium text-black mb-8">
-                            Наш продукт
+                            {t("products.title")}
                         </h2>
 
                         <div className="flex flex-wrap items-center justify-center gap-3 max-w-3xl mx-auto text-[#005E77]">
                             <input
                                 type="text"
-                                placeholder="Поиск продуктов..."
+                                placeholder={t("products.search")}
                                 className="border border-[#005E77] rounded-lg px-4 py-2 max-w-[278px] max-h-[54px] focus:outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600 transition-all duration-300"
                             />
 
@@ -84,14 +86,14 @@ const OurProducts = () => {
                                         className="w-full sm:w-[150px] h-[50px] sm:h-[40px] bg-[#0BBD83] text-white text-[15px] sm:text-xs font-semibold rounded-[10px]
                     hover:bg-[#0aa775] transition-all duration-300 active:scale-[0.98]"
                                     >
-                                        Подробнее
+                                        {t("products.viewMore")}
                                     </button>
 
                                     <button
                                         className="w-full sm:w-[165px] h-[50px] sm:h-[40px] border border-[#0BBD83] text-[#0BBD83] text-[15px] sm:text-xs font-semibold rounded-[10px]
                     bg-transparent hover:bg-[#f3fef9] transition-all duration-300 active:scale-[0.98]"
                                     >
-                                        Особенности
+                                        {t("products.features")}
                                     </button>
                                 </div>
                             </div>
@@ -106,7 +108,7 @@ const OurProducts = () => {
                                 className="w-[182px] h-[54px] bg-[#0BBD83] text-white text-xl font-semibold rounded-[10px]
                 hover:bg-[#0aa775] transition-all duration-300 active:scale-[0.98]"
                             >
-                                {showAll ? "Скрыть всё" : "Показать всё"}
+                                {showAll ? t("products.hideAll") : t("products.showAll")}
                             </button>
                         </div>
                     )}

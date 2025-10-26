@@ -1,6 +1,10 @@
-import React from 'react'
+"use client";
+import React from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const Geography = () => {
+    const { t } = useLanguage();
+    
     return (
         <div>
             <section id='Geography' className="bg-white py-16 sm:py-20 md:py-28 lg:py-36">
@@ -18,7 +22,7 @@ const Geography = () => {
                         {/* Текст */}
                         <div className="w-full max-w-[1660px]">
                             <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal text-black leading-relaxed sm:leading-loose text-center sm:text-justify">
-                                Продукция <span className="font-semibold">Siyob Group Textile</span> успешно поставляется на внутренний рынок и экспортируется в более чем 10 стран, включая: Китай, Индию, Пакистан, Иран, Египет, Турцию и Европейские страны. Это подтверждает высокую конкурентоспособность и доверие международных партнёров к нашему бренду.
+                                <span className="font-semibold">Siyob Group Textile</span> {t("geography.text")}
                             </p>
                         </div>
                     </div>

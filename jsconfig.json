@@ -4,6 +4,8 @@
     "paths": {
       "@/*": ["*"],
       "@index": ["index.jsx"]
-    }
-  }
+    },
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"]
 }

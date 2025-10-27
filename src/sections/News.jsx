@@ -2,18 +2,55 @@
 import React, { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
+// Статические данные для fallback
+const staticNews = [
+    {
+        title: "Core Spun Yarn против Iceland Yarn — какая из них подходит вашему бренду?",
+        image: "/News/News_1.jpg",
+        content: "Основа пряжи обеспечивает прочную устойчивость, обернутую в элегантные слои волокон. Исландская пряжа сочетает 50% чистого акрила и 50% переработанного акрила, предлагая пышность."
+    },
+    {
+        title: "Core Spun Yarn против Iceland Yarn — какая из них подходит вашему бренду?",
+        image: "/News/News_2.jpg",
+        content: "Основа пряжи обеспечивает прочную устойчивость, обернутую в элегантные слои волокон. Исландская пряжа сочетает 50% чистого акрила и 50% переработанного акрила, предлагая пышность."
+    },
+    {
+        title: "Core Spun Yarn против Iceland Yarn — какая из них подходит вашему бренду?",
+        image: "/News/News_3.jpg",
+        content: "Основа пряжи обеспечивает прочную устойчивость, обернутую в элегантные слои волокон. Исландская пряжа сочетает 50% чистого акрила и 50% переработанного акрила, предлагая пышность."
+    }
+];
+
 const News = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
   const { t } = useLanguage();
-  const [news, setnews] = useState([]);
+  const [news, setnews] = useState(staticNews);
 
   useEffect(() => {
+    // Проверяем, что мы на клиенте
+    if (typeof window === 'undefined') {
+      setnews(staticNews);
+      return;
+    }
+
     // Имитируем запрос к базе данных через API
-    fetch("/Data/Data.json")
-      .then((res) => res.json())
-      .then((data) => setnews(data.news))
-      .catch((err) => console.error("Ошибка загрузки:", err));
+    console.log("Загружаем данные новостей...");
+    fetch("/data/Data.json")
+      .then((res) => {
+        console.log("Ответ получен:", res.status);
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        return res.json();
+      })
+      .then((data) => {
+        console.log("Данные новостей:", data);
+        setnews(data.news || staticNews);
+      })
+      .catch((err) => {
+        console.error("Ошибка загрузки:", err);
+        // Fallback данные
+        setnews(staticNews);
+      });
   }, []);
 
   // Отслеживаем ширину экрана
@@ -32,6 +69,8 @@ const News = () => {
     }
   };
 
+  console.log("Количество новостей:", news.length);
+
   return (
     <section className="max-w-[1920px] mx-auto px-5 sm:px-5 md:px-7 lg:px-[50px] 2xl:px-[100px] bg-gray-50  py-12 sm:py-16 ">
       <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10 sm:mb-12 text-black">
@@ -39,7 +78,12 @@ const News = () => {
       </h2>
 
       <div className="flex flex-col items-center gap-6 sm:gap-8">
-        {news.map((item, i) => {
+        {news.length === 0 ? (
+          <div className="text-center text-gray-500">
+            Загрузка новостей...
+          </div>
+        ) : (
+          news.map((item, i) => {
           const isOpen = openIndex === i;
 
           return (
@@ -89,7 +133,8 @@ const News = () => {
             </div>
 
           );
-        })}
+        })
+        )}
       </div>
     </section>
   );

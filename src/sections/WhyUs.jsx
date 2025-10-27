@@ -8,7 +8,7 @@ const WhyUs = () => {
 
     useEffect(() => {
         // Имитируем запрос к базе данных через API
-        fetch("/Data/Data.json")
+        fetch("/data/Data.json")
             .then((res) => res.json())
             .then((data) => setwhyUs(data.whyUs))
             .catch((err) => console.error("Ошибка загрузки:", err));
@@ -53,23 +53,23 @@ const WhyUs = () => {
                         <div className="space-y-10 md:space-y-12">
                             {[
                                 {
-                                    img: "/Icons/vector.png",
+                                    img: "/Icons/Vector.png",
                                     text: t("whyUs.quality"),
                                 },
                                 {
-                                    img: "/Icons/vector-1.png",
+                                    img: "/Icons/Vector-1.png",
                                     text: t("whyUs.reliability"),
                                 },
                                 {
-                                    img: "/Icons/vector-4.png",
+                                    img: "/Icons/Vector-4.png",
                                     text: t("whyUs.openness"),
                                 },
                                 {
-                                    img: "/Icons/vector-2.png",
+                                    img: "/Icons/Vector-2.png",
                                     text: t("whyUs.delivery"),
                                 },
                                 {
-                                    img: "/Icons/vector-3.png",
+                                    img: "/Icons/Vector-3.png",
                                     text: t("whyUs.international"),
                                 },
                             ].map(({ img, text }, i) => (

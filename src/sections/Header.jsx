@@ -39,7 +39,7 @@ const Header = ({ setActiveSection }) => {
                     <img
                         src="/Logo/Logo_white.png"
                         alt="Siyob Group Logo"
-                        className="max-w-[120px] sm:max-w-[150px] lg:max-w-[170px] xl:max-w-[184px] h-auto"
+                        className="w-[220px] h-[70px] object-contain"
                     />
                 </button>
 
@@ -80,7 +80,7 @@ const Header = ({ setActiveSection }) => {
                         >
                             {language.toUpperCase()}
                         </button>
-                        
+
                         {langMenuOpen && (
                             <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-lg overflow-hidden">
                                 {['ru', 'en', 'uz'].filter(lang => lang !== language).map((lang) => (

@@ -18,7 +18,7 @@ export default function ServicesSection() {
 
   useEffect(() => {
     // Имитируем запрос к базе данных через API
-    fetch("/Data/Data.json")
+    fetch("/data/Data.json")
       .then((res) => res.json())
       .then((data) => setourServises(data.ourServises))
       .catch((err) => console.error("Ошибка загрузки:", err));
@@ -101,8 +101,8 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <button
               key={index}
-              className="px-2 sm:px-4 py-1.5 sm:py-2.5 rounded-[10px] border-2 border-[#005E77] text-[#005E77] 
-                 hover:bg-[#005E77] hover:text-white transition-colors duration-200 
+              className="px-2 sm:px-4 py-1.5 sm:py-2.5 rounded-[10px] border-2 border-[#005E77] text-[#005E77]
+                 hover:bg-[#005E77] hover:text-white transition-colors duration-200
                  text-sm sm:text-base md:text-xl font-medium"
             >
               {service}
@@ -111,7 +111,7 @@ export default function ServicesSection() {
         </div>
 
         <div
-          className="flex flex-col-reverse lg:flex-row items-center lg:items-start 
+          className="flex flex-col-reverse lg:flex-row items-center lg:items-start
           justify-center gap-6 md:gap-10 xl:gap-[81px]"
         >
           <div className="max-w-[832px] text-black font-normal text-xs sm:text-base md:text-lg lg:text-xl leading-relaxed text-center lg:text-left">
@@ -148,8 +148,8 @@ export default function ServicesSection() {
             </ul>
 
               <button
-              className="bg-[#0BBD83] hover:bg-teal-700 text-white 
-             px-5 py-3 sm:px-6 sm:py-4 rounded-[10px] 
+              className="bg-[#0BBD83] hover:bg-teal-700 text-white
+             px-5 py-3 sm:px-6 sm:py-4 rounded-[10px]
              text-sm sm:text-lg md:text-xl font-medium mt-5 sm:mt-[55px]
              whitespace-nowrap"
             >
@@ -170,13 +170,13 @@ export default function ServicesSection() {
             )}
             <button className="absolute inset-0 flex items-center justify-center group">
               <div
-                className="w-8 sm:w-14 md:w-16 h-8 sm:h-14 md:h-16 rounded-full bg-white/90 
-                     flex items-center justify-center 
+                className="w-8 sm:w-14 md:w-16 h-8 sm:h-14 md:h-16 rounded-full bg-white/90
+                     flex items-center justify-center
                      group-hover:bg-white transition-colors"
               >
                 <div
-                  className="w-0 h-0 border-t-[6px] sm:border-t-[9px] md:border-t-[10px] border-t-transparent 
-                       border-l-[10px] sm:border-l-[16px] md:border-l-[18px] border-l-teal-900 
+                  className="w-0 h-0 border-t-[6px] sm:border-t-[9px] md:border-t-[10px] border-t-transparent
+                       border-l-[10px] sm:border-l-[16px] md:border-l-[18px] border-l-teal-900
                        border-b-[6px] sm:border-b-[9px] md:border-b-[10px] border-b-transparent ml-1"
                 ></div>
               </div>
@@ -188,9 +188,9 @@ export default function ServicesSection() {
       <section className="bg-white py-12 sm:py-16">
         <div className="max-w-[1920px] mx-auto px-3 sm:px-4 flex flex-col lg:flex-row-reverse justify-center gap-10 relative">
           <div
-            className="hidden lg:block lg:sticky top-[100px] self-start 
-              w-full sm:w-[420px] md:w-[450px] lg:max-w-[480px] 
-              bg-gradient-to-br from-teal-50 to-white border-2 border-teal-200 
+            className="hidden lg:block lg:sticky top-[100px] self-start
+              w-full sm:w-[420px] md:w-[450px] lg:max-w-[480px]
+              bg-gradient-to-br from-teal-50 to-white border-2 border-teal-200
               rounded-2xl p-6 shadow-xl ml-auto mr-[4%]"
           >
             <h3 className="text-lg md:text-xl font-semibold text-black mb-3">
@@ -229,7 +229,7 @@ export default function ServicesSection() {
 
               <button
                 type="submit"
-                className="text-center w-full h-[50px] bg-[#0BBD83] hover:bg-teal-700 text-white 
+                className="text-center w-full h-[50px] bg-[#0BBD83] hover:bg-teal-700 text-white
                 rounded-[10px] text-base md:text-lg font-medium transition-all"
               >
                 {t("services.formSubmit")}
@@ -284,7 +284,7 @@ export default function ServicesSection() {
 
                   <button
                     type="submit"
-                    className="text-center w-full h-[50px] bg-[#0BBD83] hover:bg-teal-700 text-white 
+                    className="text-center w-full h-[50px] bg-[#0BBD83] hover:bg-teal-700 text-white
                     rounded-[10px] text-base sm:text-lg font-medium transition-all"
                   >
                     {t("services.formSubmit")}
@@ -297,7 +297,7 @@ export default function ServicesSection() {
           {!isFormVisible && (
             <button
               onClick={() => setIsFormVisible(true)}
-              className="fixed bottom-6 right-6 bg-[#0BBD83] hover:bg-teal-700 text-white 
+              className="fixed bottom-6 right-6 bg-[#0BBD83] hover:bg-teal-700 text-white
               rounded-full w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center text-2xl sm:text-3xl shadow-lg z-30 lg:hidden"
             >
               💬

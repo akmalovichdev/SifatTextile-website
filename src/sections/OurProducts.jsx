@@ -2,18 +2,80 @@
 import React, { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
+// Статические данные для fallback
+const staticProducts = [
+    {
+        id: 1,
+        img: "/OurProducts/OurProducts_1.png",
+        title: "Ne 6/1 – Ne 12/1 - Грубая, плотная и прочная пряжа."
+    },
+    {
+        id: 2,
+        img: "/OurProducts/OurProducts_2.png",
+        title: "Ne 16/1 – Ne 24/1 - Средняя линейная плотность."
+    },
+    {
+        id: 3,
+        img: "/OurProducts/OurProducts_3.png",
+        title: "Ne 30/1 – Ne 40/1 - Тонкая и ровная пряжа высокого качества."
+    },
+    {
+        id: 4,
+        img: "/OurProducts/OurProducts_4.png",
+        title: "100% полиэстер синельная пряжа"
+    },
+    {
+        id: 5,
+        img: "/OurProducts/OurProducts_5.png",
+        title: "Ne 16/1 – Ne 24/1 - Средняя линейная плотность."
+    },
+    {
+        id: 6,
+        img: "/OurProducts/OurProducts_6.png",
+        title: "Пряжа исландия"
+    },
+    {
+        id: 7,
+        img: "/OurProducts/OurProducts_7.png",
+        title: "Ne 30/1 – Ne 40/1 - Тонкая и ровная пряжа высокого качества."
+    },
+    {
+        id: 8,
+        img: "/OurProducts/OurProducts_8.png",
+        title: "Ne 6/1 – Ne 12/1 - Грубая, плотная и прочная пряжа."
+    }
+];
+
 const OurProducts = () => {
     const [showAll, setShowAll] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState(staticProducts);
     const { t } = useLanguage();
 
     useEffect(() => {
+      // Проверяем, что мы на клиенте
+      if (typeof window === 'undefined') {
+        setProducts(staticProducts);
+        return;
+      }
+
       // Имитируем запрос к базе данных через API
-      fetch("/Data/Data.json")
-        .then((res) => res.json())
-        .then((data) => setProducts(data.products))
-        .catch((err) => console.error("Ошибка загрузки:", err));
+      console.log("Загружаем данные продуктов...");
+      fetch("/data/Data.json")
+        .then((res) => {
+          console.log("Ответ получен:", res.status);
+          if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+          return res.json();
+        })
+        .then((data) => {
+          console.log("Данные продуктов:", data);
+          setProducts(data.products || staticProducts);
+        })
+        .catch((err) => {
+          console.error("Ошибка загрузки:", err);
+          // Fallback данные
+          setProducts(staticProducts);
+        });
     }, []);
 
     // Проверяем ширину окна (нужно, чтобы при ресайзе всё было корректно)
@@ -26,6 +88,9 @@ const OurProducts = () => {
 
     // Если мобильное — показываем 2 карточки, иначе все
     const visibleProducts = isMobile && !showAll ? products.slice(0, 2) : products;
+
+    console.log("Количество продуктов:", products.length);
+    console.log("Видимые продукты:", visibleProducts.length);
 
     return (
         <div>
@@ -59,7 +124,12 @@ const OurProducts = () => {
 
                     {/* Сетка продуктов */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 mb-8 justify-items-center px-4 md:px-8">
-                        {visibleProducts.map(({ id, img, title }) => (
+                        {visibleProducts.length === 0 ? (
+                            <div className="col-span-full text-center text-gray-500">
+                                Загрузка продуктов...
+                            </div>
+                        ) : (
+                            visibleProducts.map(({ id, img, title }) => (
                             <div
                                 key={id}
                                 className="bg-white rounded-lg border border-[#0BBD83] p-6 hover:shadow-lg hover:shadow-[#0BBD83]/40
@@ -97,7 +167,8 @@ const OurProducts = () => {
                                     </button>
                                 </div>
                             </div>
-                        ))}
+                        ))
+                        )}
                     </div>
 
                     {/* Кнопка Показать / Скрыть */}

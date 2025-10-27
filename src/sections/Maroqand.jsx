@@ -8,7 +8,7 @@ const Maroqand = () => {
 
   useEffect(() => {
     // Имитируем запрос к базе данных через API
-    fetch("/Data/Data.json")
+    fetch("/data/Data.json")
       .then((res) => res.json())
       .then((data) => setmaroqand(data.maroqand))
       .catch((err) => console.error("Ошибка загрузки:", err));
@@ -19,7 +19,7 @@ const Maroqand = () => {
       <section className="max-w-[1920px] mx-auto px-5 sm:px-5 md:px-7 lg:px-[50px] 2xl:px-[100px] mb-[80px] sm:mb-[100px] mt-[120px] sm:mt-[180px] lg:mt-[247px]">
         <div
           className="
-        flex flex-col 
+        flex flex-col
         2xl:flex-row
         items-center [@media(min-width:1651px)]:items-start
         justify-center gap-10 xl:gap-[81px]
@@ -53,8 +53,8 @@ const Maroqand = () => {
 
             <div className="flex justify-center [@media(min-width:1651px)]:justify-start">
               <button
-                className="bg-[#0BBD83] hover:bg-teal-700 text-white 
-            px-5 py-3 sm:px-6 sm:py-4 rounded-[10px] 
+                className="bg-[#0BBD83] hover:bg-teal-700 text-white
+            px-5 py-3 sm:px-6 sm:py-4 rounded-[10px]
             text-sm sm:text-lg md:text-xl font-medium mt-[40px] sm:mt-[55px]
             whitespace-nowrap transition-all duration-300"
               >
@@ -66,12 +66,12 @@ const Maroqand = () => {
           {/* --- Изображение --- */}
           <div
             className="
-          relative 
-          w-full 
-          max-w-[700px] 
+          relative
+          w-full
+          max-w-[700px]
           sm:max-w-[747px]
-          h-[250px] sm:h-[320px] md:h-[400px] lg:h-[465px] 
-          rounded-lg overflow-hidden shadow-lg 
+          h-[250px] sm:h-[320px] md:h-[400px] lg:h-[465px]
+          rounded-lg overflow-hidden shadow-lg
           transition-all duration-500 ease-in-out
           flex-shrink-0
         "
@@ -88,13 +88,13 @@ const Maroqand = () => {
             )}
             <button className="absolute inset-0 flex items-center justify-center group">
               <div
-                className="w-10 sm:w-14 md:w-16 h-10 sm:h-14 md:h-16 rounded-full bg-white/90 
-            flex items-center justify-center 
+                className="w-10 sm:w-14 md:w-16 h-10 sm:h-14 md:h-16 rounded-full bg-white/90
+            flex items-center justify-center
             group-hover:bg-white transition-colors duration-300"
               >
                 <div
-                  className="w-0 h-0 border-t-[6px] sm:border-t-[9px] md:border-t-[10px] border-t-transparent 
-              border-l-[10px] sm:border-l-[16px] md:border-l-[18px] border-l-teal-900 
+                  className="w-0 h-0 border-t-[6px] sm:border-t-[9px] md:border-t-[10px] border-t-transparent
+              border-l-[10px] sm:border-l-[16px] md:border-l-[18px] border-l-teal-900
               border-b-[6px] sm:border-b-[9px] md:border-b-[10px] border-b-transparent ml-1"
                 ></div>
               </div>

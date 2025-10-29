@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Montserrat } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
+import LoaderWrapper from "@/components/LoaderWrapper";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -12,7 +13,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={montserrat.className}>
         <LanguageProvider>
-          {children}
+          <LoaderWrapper>
+            {children}
+          </LoaderWrapper>
         </LanguageProvider>
       </body>
     </html>

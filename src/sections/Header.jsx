@@ -25,8 +25,8 @@ const Header = ({ setActiveSection }) => {
     ];
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-[#0BBD83] shadow-sm shadow-[#0BBD83]">
-            <div className="max-w-[1920px] mx-auto px-5 sm:px-5 md:px-7 lg:px-[50px] 2xl:px-[100px] py-3 sm:py-4 flex items-center justify-between">
+        <header className="fixed top-0 left-0 right-0 z-[9998] bg-[#0BBD83] shadow-lg shadow-[#0BBD83]/50">
+            <div className="max-w-[1920px] mx-auto px-4 sm:px-5 md:px-7 lg:px-[50px] 2xl:px-[100px] py-2.5 sm:py-3 md:py-4 flex items-center justify-between gap-3">
 
                 {/* Логотип */}
                 <button
@@ -35,11 +35,11 @@ const Header = ({ setActiveSection }) => {
                         setMenuOpen(false);
                     }}
 
-                    className="flex items-center gap-2">
+                    className="flex items-center gap-2 flex-shrink-0">
                     <img
                         src="/Logo/Logo_white.png"
                         alt="Siyob Group Logo"
-                        className="w-[220px] h-[70px] object-contain"
+                        className="h-[50px] w-auto sm:h-[60px] md:h-[70px] lg:h-[80px] xl:h-[90px] object-contain drop-shadow-lg"
                     />
                 </button>
 
@@ -106,8 +106,9 @@ const Header = ({ setActiveSection }) => {
 
                 {/* Кнопка меню (Mobile) */}
                 <button
-                    className="lg:hidden text-white text-3xl"
+                    className="lg:hidden text-white text-2xl sm:text-3xl p-2 hover:bg-white/10 rounded-lg transition-colors flex-shrink-0"
                     onClick={() => setMenuOpen(!menuOpen)}
+                    aria-label="Меню"
                 >
                     {menuOpen ? <FaTimes /> : <FaBars />}
                 </button>

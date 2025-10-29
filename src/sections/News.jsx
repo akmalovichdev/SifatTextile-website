@@ -104,28 +104,28 @@ const News = () => {
               <div
                 className={`relative overflow-hidden transition-all duration-700 ${isMobile
                   ? isOpen
-                    ? "max-h-[418px]"
-                    : "max-h-[180px]"
-                  : "group-hover:max-h-[418px] max-h-[180px] sm:max-h-[200px]"
+                    ? "max-h-[450px]"
+                    : "max-h-[160px] sm:max-h-[180px]"
+                  : "group-hover:max-h-[450px] max-h-[160px] sm:max-h-[200px]"
                   }`}
               >
-                <div className="relative z-10 flex items-center justify-center h-[180px] sm:h-[200px] px-4">
-                  <h3 className="text-black text-lg sm:text-xl md:text-2xl font-bold text-center drop-shadow-md leading-tight">
+                <div className="relative z-10 flex items-center justify-center h-[160px] sm:h-[180px] md:h-[200px] px-4 sm:px-6">
+                  <h3 className="text-black text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-center drop-shadow-md leading-tight">
                     {item.title}
                   </h3>
                 </div>
 
                 <div
-                  className={`relative z-10 p-4 sm:p-6 transition-all duration-700
+                  className={`relative z-10 px-4 sm:px-6 pb-6 sm:pb-8 pt-2 sm:pt-4 transition-all duration-700
                 ${isMobile
                       ? isOpen
-                        ? "opacity-100 max-h-[220px]"
+                        ? "opacity-100 max-h-[260px]"
                         : "opacity-0 max-h-0"
-                      : "opacity-0 group-hover:opacity-100 max-h-0 group-hover:max-h-[218px]"
+                      : "opacity-0 group-hover:opacity-100 max-h-0 group-hover:max-h-[250px]"
                     }
                 `}
                 >
-                  <p className="text-black text-base sm:text-lg md:text-xl font-medium leading-relaxed text-center sm:text-left">
+                  <p className="text-black text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed text-center sm:text-left">
                     {item.content}
                   </p>
                 </div>

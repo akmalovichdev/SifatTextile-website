@@ -1,7 +1,50 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-xs: 475px;
+}
+
 :root {
   --main-color: #0BBD83;
 }
 
+/* Кастомная анимация для загрузчика */
+@keyframes float {
 
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(var(--float-x, 30px), var(--float-y, -30px)) scale(1.5);
+  }
+}
+
+.animate-float {
+  animation: float infinite ease-in-out;
+}
+
+/* Управление z-index для основных элементов */
+header {
+  z-index: 9998 !important;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+footer {
+  position: relative;
+  z-index: 10;
+}

@@ -1,7 +1,16 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, GeoJSON, useMap, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+
+// Исправляем иконки маркеров для Leaflet
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+    iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
+    iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+});
 
 // Компонент для центрирования карты
 function MapCenter({ center, zoom }) {
@@ -49,7 +58,7 @@ const InteractiveLeafletMapClient = () => {
             id: 'UZB',
             altIds: ['Uzbekistan', 'Узбекистан'],
             name: 'Узбекистан',
-            color: '#808080',
+            color: '#005E77', // Фирменный синий цвет
             position: [41.3, 64.5],
             percentage: '',
             description: 'Главный поставщик - Республика Узбекистан',
@@ -111,7 +120,16 @@ const InteractiveLeafletMapClient = () => {
             description: 'Российская Федерация'
         },
 
-        // Европа (Восточная)
+        // Европа
+        {
+            id: 'DEU',
+            altIds: ['Germany', 'Германия'],
+            name: 'Европа (Германия)',
+            color: '#0BBD83',
+            position: [51.0, 10.0],
+            percentage: '42%, 20%',
+            description: 'Федеративная Республика Германия'
+        },
         {
             id: 'POL',
             altIds: ['Poland', 'Польша'],
@@ -120,24 +138,6 @@ const InteractiveLeafletMapClient = () => {
             position: [52.0, 20.0],
             percentage: '42%, 20%',
             description: 'Республика Польша'
-        },
-        {
-            id: 'CZE',
-            altIds: ['Czech Republic', 'Czechia', 'Чехия'],
-            name: 'Европа (Чехия)',
-            color: '#0BBD83',
-            position: [49.8, 15.5],
-            percentage: '42%, 20%',
-            description: 'Чешская Республика'
-        },
-        {
-            id: 'SVK',
-            altIds: ['Slovakia', 'Словакия'],
-            name: 'Европа (Словакия)',
-            color: '#0BBD83',
-            position: [48.7, 19.7],
-            percentage: '42%, 20%',
-            description: 'Словацкая Республика'
         },
 
         // Египет
@@ -316,6 +316,24 @@ const InteractiveLeafletMapClient = () => {
                             onEachFeature={onEachCountry}
                         />
                     )}
+
+                    {/* Маркер завода Pure Milk */}
+                    <Marker position={[41.3, 69.3]}>
+                        <Popup>
+                            <div style={{ padding: '12px', fontFamily: 'Arial, sans-serif', minWidth: '200px' }}>
+                                <h3 style={{ margin: '0 0 8px 0', color: '#005E77', fontSize: '16px', fontWeight: 'bold' }}>
+                                    Завод Pure Milk
+                                </h3>
+                                <p style={{ margin: '0 0 6px 0', fontSize: '13px', color: '#666' }}>
+                                    Тайлякский район, населённый пункт Кургонча
+                                </p>
+                                <p style={{ margin: '0', fontSize: '12px', color: '#666' }}>
+                                    Тел: +99890 657 05 02<br />
+                                    +998 97 390 38 00
+                                </p>
+                            </div>
+                        </Popup>
+                    </Marker>
                 </MapContainer>
             </div>
 

@@ -33,7 +33,7 @@ const Footer = ({ setActiveSection }) => {
                         {[
                             {
                                 Icon: FaLocationDot,
-                                text: "Комната 908, здание Kaijun, улица № 19 Juxiang 3rd, город Даланг, город Дунгуань, провинция Гуандун, Китай",
+                                text: "Тайлякский район, населённый пункт Кургонча",
                             },
                             {
                                 Icon: MdLocalPostOffice,
@@ -41,7 +41,11 @@ const Footer = ({ setActiveSection }) => {
                             },
                             {
                                 Icon: FaPhone,
-                                text: "+998(99)322-9947",
+                                text: "+99890 657 05 02",
+                            },
+                            {
+                                Icon: FaPhone,
+                                text: "+998 97 390 38 00",
                             },
                         ].map(({ Icon, text }, i) => (
                             <div

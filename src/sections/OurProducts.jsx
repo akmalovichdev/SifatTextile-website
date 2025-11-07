@@ -7,42 +7,42 @@ const staticProducts = [
     {
         id: 1,
         img: "/OurProducts/OurProducts_1.png",
-        title: "Ne 6/1 – Ne 12/1 - Грубая, плотная и прочная пряжа."
+        title: "Ne 6/1 – Ne 20/1 - Грубая, плотная и прочная пряжа."
     },
     {
         id: 2,
         img: "/OurProducts/OurProducts_2.png",
-        title: "Ne 16/1 – Ne 24/1 - Средняя линейная плотность."
+        title: "Ne 12/1 – Ne 16/1 - Средняя линейная плотность."
     },
     {
         id: 3,
         img: "/OurProducts/OurProducts_3.png",
-        title: "Ne 30/1 – Ne 40/1 - Тонкая и ровная пряжа высокого качества."
+        title: "Ne 18/1 – Ne 20/1 - Тонкая и ровная пряжа высокого качества."
     },
     {
         id: 4,
         img: "/OurProducts/OurProducts_4.png",
-        title: "100% полиэстер синельная пряжа"
+        title: "Ne 24/1 – Ne 30/1 - 100% полиэстер синельная пряжа"
     },
     {
         id: 5,
         img: "/OurProducts/OurProducts_5.png",
-        title: "Ne 16/1 – Ne 24/1 - Средняя линейная плотность."
+        title: "Ne 32/1 – Ne 36/1 - Средняя линейная плотность."
     },
     {
         id: 6,
         img: "/OurProducts/OurProducts_6.png",
-        title: "Пряжа исландия"
+        title: "Ne 40/1 - Пряжа исландия"
     },
     {
         id: 7,
         img: "/OurProducts/OurProducts_7.png",
-        title: "Ne 30/1 – Ne 40/1 - Тонкая и ровная пряжа высокого качества."
+        title: "Ne 6/1 – Ne 10/1 - Тонкая и ровная пряжа высокого качества."
     },
     {
         id: 8,
         img: "/OurProducts/OurProducts_8.png",
-        title: "Ne 6/1 – Ne 12/1 - Грубая, плотная и прочная пряжа."
+        title: "Ne 6/1 – Ne 30/1 - Грубая, плотная и прочная пряжа."
     }
 ];
 
@@ -163,7 +163,7 @@ const OurProducts = () => {
                                         className="w-full sm:w-[165px] h-[50px] sm:h-[40px] border border-[#0BBD83] text-[#0BBD83] text-[15px] sm:text-xs font-semibold rounded-[10px]
                     bg-transparent hover:bg-[#f3fef9] transition-all duration-300 active:scale-[0.98]"
                                     >
-                                        {t("products.features")}
+                                        Применение
                                     </button>
                                 </div>
                             </div>

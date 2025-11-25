@@ -1,9 +1,10 @@
+"use client";
 import React from 'react'
 import { AboutUs, Hero, OurProducts, WhyUs, OurProductions, News, ContactUs, Geography, Gallery } from '@index'
 
 
 
-const MainPage = () => {
+const MainPage = ({ setActiveSection }) => {
     return (
         <div>
             <div className="min-h-screen bg-white">
@@ -11,9 +12,9 @@ const MainPage = () => {
                 <AboutUs />
                 <OurProducts />
                 <WhyUs />
-                <OurProductions />
+                <OurProductions setActiveSection={setActiveSection} />
                 <News />
-                <ContactUs />
+                <ContactUs setActiveSection={setActiveSection} />
                 <Geography />
                 <Gallery />
             </div>

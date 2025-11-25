@@ -2,10 +2,12 @@
 import React, { useState } from "react";
 import { FaPhone, FaBars, FaTimes } from "@index";
 import { useLanguage } from "@/context/LanguageContext";
+import PhoneModal from "@/components/PhoneModal";
 
 const Header = ({ setActiveSection }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [langMenuOpen, setLangMenuOpen] = useState(false);
+    const [phoneModalOpen, setPhoneModalOpen] = useState(false);
     const { t, language, changeLanguage } = useLanguage();
 
     const handleScroll = (id) => {
@@ -22,6 +24,9 @@ const Header = ({ setActiveSection }) => {
         { name: t("nav.services"), id: "OurServises" },
         { name: t("nav.whyUs"), id: "WhyUs" },
         { name: t("nav.geography"), id: "Geography" },
+        { name: t("nav.contacts"), id: "Contacts", section: "Contacts" },
+        { name: t("nav.career"), id: "Career", section: "Career" },
+        { name: t("nav.certificates"), id: "Certificates", section: "Certificates" },
     ];
 
     return (
@@ -38,15 +43,26 @@ const Header = ({ setActiveSection }) => {
                     className="flex items-center gap-2 flex-shrink-0">
                     <img
                         src="/Logo/Logo_white.png"
-                        alt="Siyob Group Logo"
-                        className="h-[50px] w-auto sm:h-[60px] md:h-[70px] lg:h-[80px] xl:h-[90px] object-contain drop-shadow-lg"
+                        alt="Sifat Textile Logo"
+                        className="h-[50px] w-auto sm:h-[60px] md:h-[65px] lg:h-[80px] xl:h-[90px] object-contain drop-shadow-lg"
                     />
                 </button>
 
                 {/* Навигация (Desktop) */}
-                <nav className="hidden lg:flex items-center gap-[10px] lg:gap-[20px] xl:gap-[30px]">
+                <nav className="hidden lg:flex items-center gap-[10px] lg:gap-[18px] xl:gap-[30px]">
                     {navItems.map((item, i) =>
-                        item.id === "OurServises" ? (
+                        item.section ? (
+                            <button
+                                key={i}
+                                onClick={() => {
+                                    setActiveSection(item.section);
+                                    setMenuOpen(false);
+                                }}
+                                className="text-sm lg:text-base xl:text-lg 2xl:text-xl font-medium text-white relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
+                            >
+                                {item.name}
+                            </button>
+                        ) : item.id === "OurServises" ? (
                             <button
                                 key={i}
                                 onClick={() => {
@@ -54,7 +70,7 @@ const Header = ({ setActiveSection }) => {
                                     handleScroll(item.id);
                                     setMenuOpen(false);
                                 }}
-                                className="text-xs lg:text-base xl:text-lg 2xl:text-xl 3xl font-medium text-white relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                                className="text-sm lg:text-base xl:text-lg 2xl:text-xl font-medium text-white relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
                             >
                                 {item.name}
                             </button>
@@ -65,7 +81,7 @@ const Header = ({ setActiveSection }) => {
                                     setActiveSection("MainPage");
                                     handleScroll(item.id);
                                 }}
-                                className="text-xs lg:text-base xl:text-lg 2xl:text-xl font-medium text-white relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                                className="text-sm lg:text-base xl:text-lg 2xl:text-xl font-medium text-white relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full cursor-pointer"
                             >
                                 {item.name}
                             </button>
@@ -99,9 +115,12 @@ const Header = ({ setActiveSection }) => {
                         )}
                     </div>
 
-                    <a href="">
+                    <button
+                        onClick={() => setPhoneModalOpen(true)}
+                        className="cursor-pointer"
+                    >
                         <FaPhone className="w-[36px] sm:w-[42px] xl:w-[46px] h-[34px] sm:h-[38px] xl:h-[40px] py-[6px] px-[10px] border-2 rounded-[10px] text-white hover:bg-white hover:text-[#0BBD83] transition-all duration-300" />
-                    </a>
+                    </button>
                 </nav>
 
                 {/* Кнопка меню (Mobile) */}
@@ -121,14 +140,25 @@ const Header = ({ setActiveSection }) => {
             >
                 <nav className="flex flex-col items-center gap-6 py-6">
                     {navItems.map((item, i) =>
-                        item.id === "OurServises" ? (
+                        item.section ? (
+                            <button
+                                key={i}
+                                onClick={() => {
+                                    setActiveSection(item.section);
+                                    setMenuOpen(false);
+                                }}
+                                className="text-base sm:text-lg md:text-XL font-medium hover:text-[#0BBD83] transition-colors cursor-pointer"
+                            >
+                                {item.name}
+                            </button>
+                        ) : item.id === "OurServises" ? (
                             <button
                                 key={i}
                                 onClick={() => {
                                     setActiveSection("OurServises");
                                     setMenuOpen(false);
                                 }}
-                                className="text-base sm:text-lg md:text-XL font-medium hover:text-[#0BBD83] transition-colors"
+                                className="text-base sm:text-lg md:text-XL font-medium hover:text-[#0BBD83] transition-colors cursor-pointer"
                             >
                                 {item.name}
                             </button>
@@ -140,7 +170,7 @@ const Header = ({ setActiveSection }) => {
                                     handleScroll(item.id);
                                     setMenuOpen(false);
                                 }}
-                                className="text-base sm:text-lg md:text-XL font-medium hover:text-[#0BBD83] transition-colors"
+                                className="text-base sm:text-lg md:text-XL font-medium hover:text-[#0BBD83] transition-colors cursor-pointer"
                             >
                                 {item.name}
                             </button>
@@ -166,14 +196,19 @@ const Header = ({ setActiveSection }) => {
                         ))}
                     </div>
 
-                    <a
-                        href=""
-                        className="flex items-center gap-2 text-lg sm:text-xl border border-white px-5 py-2 rounded-lg hover:bg-white hover:text-[var(--main-color)] transition-all duration-300"
+                    <button
+                        onClick={() => {
+                            setPhoneModalOpen(true);
+                            setMenuOpen(false);
+                        }}
+                        className="flex items-center gap-2 text-lg sm:text-xl border border-white px-5 py-2 rounded-lg hover:bg-white hover:text-[#0BBD83] transition-all duration-300 cursor-pointer"
                     >
                         <FaPhone /> {t("footer.call")}
-                    </a>
+                    </button>
                 </nav>
             </div>
+
+            <PhoneModal isOpen={phoneModalOpen} onClose={() => setPhoneModalOpen(false)} />
         </header>
     );
 };

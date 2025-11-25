@@ -2,9 +2,9 @@
 import { FaLocationDot, FaPhone, FaTelegram } from "react-icons/fa6";
 import { MdLocalPostOffice } from "react-icons/md";
 import { RiInstagramFill } from "react-icons/ri";
-import { FaYoutube, FaGoogle, FaBars, FaTimes } from "react-icons/fa";
+import { FaYoutube, FaGoogle, FaBars, FaTimes, FaFacebook } from "react-icons/fa";
 
-export { FaLocationDot, MdLocalPostOffice, FaPhone, FaTelegram, RiInstagramFill, FaYoutube, FaGoogle, FaBars, FaTimes }
+export { FaLocationDot, MdLocalPostOffice, FaPhone, FaTelegram, RiInstagramFill, FaYoutube, FaGoogle, FaBars, FaTimes, FaFacebook }
 
 // IMG
 
@@ -30,6 +30,9 @@ import Gallery from "@/sections/Gallery.jsx";
 import Surxon from "@/sections/Surxon.jsx";
 import Maroqand from "@/sections/Maroqand.jsx";
 import Kamalak from "@/sections/Kamalak.jsx";
+import Contacts from "@/sections/Contacts.jsx";
+import Career from "@/sections/Career.jsx";
+import Certificates from "@/sections/Certificates.jsx";
 
 
-export {Footer, MainPage, Header, Hero, AboutUs, OurProducts, WhyUs, OurProductions, News, ContactUs, Geography, Gallery, OurServises, Surxon, Maroqand, Kamalak } 
+export {Footer, MainPage, Header, Hero, AboutUs, OurProducts, WhyUs, OurProductions, News, ContactUs, Geography, Gallery, OurServises, Surxon, Maroqand, Kamalak, Contacts, Career, Certificates }

@@ -28,60 +28,65 @@ export default function ServicesSection() {
 
   const services = [
     t("services.factoryYarn"),
-    t("services.factoryFeather"),
-    t("services.factoryCovered"),
-    t("services.factoryMixed"),
-    t("services.factoryNylon"),
-    t("services.factoryWool"),
-    t("services.factoryPolyester"),
   ]
 
   const processBlocks = [
     {
-      title: "Процесс производства пряжи",
-      text: [
-        "На нашем заводе стержневой пряжи производство стержневой пряжи разделено на следующие процессы:",
-        "вскрытие и очистка → кардочесание → рисование → ровница → прядение → постобработка. ",
-        "После этой серии процессов выбранное штапельное волокно в конечном итоге станет готовой пряжей стержневого прядения."
-      ],
+      title: t("ourServises.processTitle"),
+      intro: t("ourServises.processIntro"),
+      text: [],
       img: "/OurServises/OurServises_2.png",
     },
     {
-      title: "1. Процесс открытия и очистки",
-      text: [
-        "Открытие и очистка — это первый процесс после попадания штапельного волокна в стержневая пряжа фабрика. В этом процессе короткое волокно превращается в однородный рулон, чтобы создать условия для процесса чесания. ",
-        "Основными задачами этого процесса являются:",
-        "(1) Разрыхление: за счет разрыва и выдувания штифтовых гвоздей, бичей в каждой отдельной машине очистки и очистки, сжатые блочные волокна в пакете волокон разрыхляются на небольшие пучки волокон весом 0.3-0.5 г, которые используется для удаления загрязнений и очистки. Смешивание создает условия для разделения на отдельные волокна. Минимизируйте фрагментацию мусора и повреждение волокна во время вскрытия.",
-        "(2) Удаление примесей: одновременное удаление от 50% до 60% примесей из хлопка-сырца должно уменьшить выпадение прядильных волокон и сохранить волокна.",
-        "(3) Смешивание: Смешайте все виды сырья в пропорции, фибриллы будут хорошо разрыхлены, а смешивание будет более равномерным.",
-        "(4) Равномерный рулон: сделайте рулон определенного веса, определенной длины и однородного волокна для следующего процесса."],
+      title: t("ourServises.process1Title"),
+      text: [t("ourServises.process1Text")],
       img: "/OurServises/OurServises_3.png",
     },
     {
-      title: "2. Процесс кардочесания",
-      text: [
-        "Открытие и очистка — это первый процесс после попадания штапельного волокна в стержневая пряжа фабрика. В этом процессе короткое волокно превращается в однородный рулон, чтобы создать условия для процесса чесания. ",
-        "После комбинированной машинной обработки раскрытия и очистки волокна в волокнистом рулоне в основном находятся в состоянии рыхлых волокнистых блоков и пучков волокон и содержат от 40% до 50% примесей, большинство из которых представляют собой мелкие и высокоадгезивные волокнистые примеси. Необходимо полностью разложить пучок волокон на отдельные волокна, удалить оставшиеся в нем мелкие примеси, полностью перемешать каждое компонентное волокно в состоянии одного волокна и сделать однородную прядь, чтобы удовлетворить требованиям последующего процесса производство пряжи с сердечником."
-      ],
+      title: t("ourServises.process2Title"),
+      text: [t("ourServises.process2Text")],
       img: "/OurServises/OurServises_4.png",
     },
     {
-      title: "3. Процесс рисования",
-      text: [
-        "Открытие и очистка — это первый процесс после попадания штапельного волокна в стержневая пряжа фабрика. В этом процессе короткое волокно превращается в однородный рулон, чтобы создать условия для процесса чесания.",
-        "После комбинированной машинной обработки раскрытия и очистки волокна в волокнистом рулоне в основном находятся в состоянии рыхлых волокнистых блоков и пучков волокон и содержат от 40% до 50% примесей, большинство из которых представляют собой мелкие и высокоадгезивные волокнистые примеси. Необходимо полностью разложить пучок волокон на отдельные волокна, удалить оставшиеся в нем мелкие примеси, полностью перемешать каждое компонентное волокно в состоянии одного волокна и сделать однородную прядь, чтобы удовлетворить требованиям последующего процесса производство пряжи с сердечником."
-      ],
+      title: t("ourServises.process3Title"),
+      text: [t("ourServises.process3Text")],
       img: "/OurServises/OurServises_5.png",
     },
     {
-      title: "4. Передвижной процесс",
-      text: [
-        "На фабрике по производству основной пряжи ровница является четвертым процессом, и лента может быть переработана в ровницы различной плотности и крутки для процесса прядения.",
-        "Задачами бродяжного процесса являются:",
-        "(1) Вытягивание: приготовленные полоски равномерно растягиваются и истончаются, а волокна дополнительно выпрямляются и располагаются параллельно.",
-        "(2) Скручивание: соответствующее скручивание вытянутой ленты, чтобы лента имела определенную прочность, удобную для намотки и размотки ровницы на прядильной раме."
-      ],
+      title: t("ourServises.process4Title"),
+      text: [t("ourServises.process4Text")],
       img: "/OurServises/OurServises_6.png",
+    },
+    {
+      title: t("ourServises.process5Title"),
+      text: [t("ourServises.process5Text")],
+      img: "/OurServises/OurServises_2.png",
+    },
+    {
+      title: t("ourServises.process6Title"),
+      text: [t("ourServises.process6Text")],
+      img: "/OurServises/OurServises_3.png",
+    },
+    {
+      title: t("ourServises.process7Title"),
+      text: [t("ourServises.process7Text")],
+      img: "/OurServises/OurServises_4.png",
+    },
+    {
+      title: t("ourServises.process8Title"),
+      text: [t("ourServises.process8Text")],
+      img: "/OurServises/OurServises_5.png",
+    },
+    {
+      title: t("ourServises.process9Title"),
+      text: [t("ourServises.process9Text")],
+      img: "/OurServises/OurServises_6.png",
+    },
+    {
+      title: "",
+      text: [t("ourServises.processConclusion")],
+      img: null,
+      isConclusion: true,
     },
   ]
 
@@ -116,15 +121,15 @@ export default function ServicesSection() {
         >
           <div className="max-w-[832px] text-black font-normal text-xs sm:text-base md:text-lg lg:text-xl leading-relaxed text-center lg:text-left">
             <p className="mb-3 sm:mb-6">
-              Siyob Group Tekstil предлагает комплекс услуг для партнёров в текстильной отрасли:
+              <span className="font-semibold text-[#005E77]">Sifat Textile</span> {t("ourServises.intro")}
             </p>
 
             <ul className="mb-6 sm:mb-[46px] space-y-1 sm:space-y-2">
               {[
-                "Carded и Combed Ring Spun (Ne 6/1 – Ne 40/1);",
-                "Open End (Ne 6/1 – Ne 20/1);",
-                "Slub, Lycra;",
-                "Dual Core",
+                t("ourServises.servicesList1"),
+                t("ourServises.servicesList2"),
+                t("ourServises.servicesList3"),
+                t("ourServises.servicesList4"),
               ].map((item, i) => (
                 <li key={i} className="flex items-start justify-center lg:justify-start">
                   <span className="mr-2">•</span>
@@ -135,10 +140,10 @@ export default function ServicesSection() {
 
             <ul className="space-y-1 sm:space-y-2">
               {[
-                "Выполняем заказы под требования клиента: толщина, тип пряжи, форма и вид упаковки.",
-                "Надёжные поставки в Китай, Турцию, Египет, Иран и страны Европы с полным документальным сопровождением.",
-                "Многоуровневый контроль на всех этапах производства и соответствие международным стандартам.",
-                "Персональные консультации и сопровождение для каждого партнёра.",
+                t("ourServises.features1"),
+                t("ourServises.features2"),
+                t("ourServises.features3"),
+                t("ourServises.features4"),
               ].map((item, i) => (
                 <li key={i} className="flex items-start justify-center lg:justify-start">
                   <span className="mr-2">•</span>
@@ -148,10 +153,11 @@ export default function ServicesSection() {
             </ul>
 
               <button
+              onClick={() => setIsFormVisible(true)}
               className="bg-[#0BBD83] hover:bg-teal-700 text-white
              px-5 py-3 sm:px-6 sm:py-4 rounded-[10px]
              text-sm sm:text-lg md:text-xl font-medium mt-5 sm:mt-[55px]
-             whitespace-nowrap"
+             whitespace-nowrap cursor-pointer transition-all duration-300"
             >
               {t("services.contactBtn")}
             </button>
@@ -168,19 +174,6 @@ export default function ServicesSection() {
               // Плейсхолдер (например, серая заливка или скелет)
               <div className="w-full h-full bg-gray-300 animate-pulse" />
             )}
-            <button className="absolute inset-0 flex items-center justify-center group">
-              <div
-                className="w-8 sm:w-14 md:w-16 h-8 sm:h-14 md:h-16 rounded-full bg-white/90
-                     flex items-center justify-center
-                     group-hover:bg-white transition-colors"
-              >
-                <div
-                  className="w-0 h-0 border-t-[6px] sm:border-t-[9px] md:border-t-[10px] border-t-transparent
-                       border-l-[10px] sm:border-l-[16px] md:border-l-[18px] border-l-teal-900
-                       border-b-[6px] sm:border-b-[9px] md:border-b-[10px] border-b-transparent ml-1"
-                ></div>
-              </div>
-            </button>
           </div>
         </div>
       </section>
@@ -239,7 +232,7 @@ export default function ServicesSection() {
 
           {/* Popup форма (mobile) */}
           {isFormVisible && (
-            <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center px-4">
+            <div className="fixed inset-0 bg-black/40 z-[10000] flex items-center justify-center px-4">
               <div className="relative bg-gradient-to-br from-teal-50 to-white w-full max-w-[500px] rounded-2xl p-6 border-2 border-teal-200 shadow-2xl">
                 <button
                   onClick={() => setIsFormVisible(false)}
@@ -309,27 +302,39 @@ export default function ServicesSection() {
             {processBlocks.map((block, index) => (
               <div key={index}>
                 <div className="space-y-4 sm:space-y-5 max-w-[1053px] mx-auto">
-                  <h2 className="text-lg sm:text-2xl font-semibold text-black text-center lg:text-left">
-                    {block.title}
-                  </h2>
+                  {block.title && (
+                    <h2 className="text-lg sm:text-2xl font-semibold text-black text-center lg:text-left">
+                      {block.title}
+                    </h2>
+                  )}
 
-                  <p className="text-sm sm:text-lg md:text-xl font-normal leading-relaxed">
-                    {block.text.map((line, i) => (
-                      <React.Fragment key={i}>
-                        {line}
-                        <br />
-                      </React.Fragment>
-                    ))}
-                  </p>
+                  {block.intro && (
+                    <p className="text-sm sm:text-lg md:text-xl font-normal leading-relaxed text-center lg:text-left">
+                      {block.intro}
+                    </p>
+                  )}
+
+                  {block.text && block.text.length > 0 && (
+                    <p className={`text-sm sm:text-lg md:text-xl font-normal leading-relaxed ${block.isConclusion ? 'text-center lg:text-left font-semibold' : ''}`}>
+                      {block.text.map((line, i) => (
+                        <React.Fragment key={i}>
+                          {line}
+                          {i < block.text.length - 1 && <br />}
+                        </React.Fragment>
+                      ))}
+                    </p>
+                  )}
                 </div>
 
-                <div className="mt-6 sm:mt-10 rounded-lg overflow-hidden max-w-[1029px] mx-auto">
-                  <img
-                    src={block.img}
-                    alt="Производство"
-                    className="w-full h-[220px] sm:h-[350px] md:h-[465px] object-cover rounded-lg"
-                  />
-                </div>
+                {block.img && (
+                  <div className="mt-6 sm:mt-10 rounded-lg overflow-hidden max-w-[1029px] mx-auto">
+                    <img
+                      src={block.img}
+                      alt="Производство"
+                      className="w-full h-[220px] sm:h-[350px] md:h-[465px] object-cover rounded-lg"
+                    />
+                  </div>
+                )}
               </div>
             ))}
           </div>

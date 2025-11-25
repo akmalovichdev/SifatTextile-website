@@ -124,7 +124,7 @@ const Loader = ({ onLoadComplete }) => {
                     <div className="relative p-6 sm:p-8 transform hover:scale-105 transition-transform duration-300">
                         <img
                             src="/Logo/Logo_white.png"
-                            alt="Siyob Group Logo"
+                            alt="Sifat Textile Logo"
                             className="w-[300px] sm:w-[380px] md:w-[450px] lg:w-[500px] h-[96px] sm:h-[122px] md:h-[144px] lg:h-[160px] object-contain"
                             style={{
                                 filter: 'drop-shadow(0 0 40px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.6))'

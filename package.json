@@ -10,9 +10,13 @@
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^2.0.1",
+    "@grapesjs/react": "^2.0.0",
+    "@grapesjs/studio-sdk": "^1.0.56",
+    "grapesjs": "^0.22.14",
     "leaflet": "^1.9.4",
     "next": "15.5.4",
     "react": "19.1.0",
+    "react-contenteditable": "^3.3.7",
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
     "react-leaflet": "^5.0.0",

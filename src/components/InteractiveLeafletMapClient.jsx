@@ -60,6 +60,7 @@ const InteractiveLeafletMapClient = () => {
             name: 'Узбекистан',
             color: '#005E77', // Фирменный синий цвет
             position: [41.3, 64.5],
+            tons: null,
             percentage: '',
             description: 'Главный поставщик - Республика Узбекистан',
             isMainSupplier: true
@@ -72,8 +73,45 @@ const InteractiveLeafletMapClient = () => {
             name: 'Китай',
             color: '#0BBD83',
             position: [35.0, 105.0],
-            percentage: '65%, 25%',
+            tons: 11484,
+            percentage: '26,13%',
             description: 'Китайская Народная Республика'
+        },
+
+        // Турция
+        {
+            id: 'TUR',
+            altIds: ['Turkey', 'Турция', 'Typumg'],
+            name: 'Турция',
+            color: '#0BBD83',
+            position: [39.0, 35.0],
+            tons: 19275,
+            percentage: '43,86%',
+            description: 'Турецкая Республика'
+        },
+
+        // Польша
+        {
+            id: 'POL',
+            altIds: ['Poland', 'Польша'],
+            name: 'Польша',
+            color: '#0BBD83',
+            position: [52.0, 20.0],
+            tons: 2198,
+            percentage: '5,00%',
+            description: 'Республика Польша'
+        },
+
+        // Германия
+        {
+            id: 'DEU',
+            altIds: ['Germany', 'Германия', 'Гурмания'],
+            name: 'Германия',
+            color: '#0BBD83',
+            position: [51.0, 10.0],
+            tons: 2198,
+            percentage: '5,00%',
+            description: 'Федеративная Республика Германия'
         },
 
         // Иран
@@ -83,30 +121,21 @@ const InteractiveLeafletMapClient = () => {
             name: 'Иран',
             color: '#0BBD83',
             position: [32.0, 53.0],
-            percentage: '52%, 30%',
+            tons: 2565,
+            percentage: '5,84%',
             description: 'Исламская Республика Иран'
         },
 
-        // Бангладеш
+        // Армения
         {
-            id: 'BGD',
-            altIds: ['Bangladesh', 'Бангладеш'],
-            name: 'Бангладеш',
+            id: 'ARM',
+            altIds: ['Armenia', 'Армения'],
+            name: 'Армения',
             color: '#0BBD83',
-            position: [24.0, 90.0],
-            percentage: '65%, 40%',
-            description: 'Народная Республика Бангладеш'
-        },
-
-        // Турция
-        {
-            id: 'TUR',
-            altIds: ['Turkey', 'Турция'],
-            name: 'Турция',
-            color: '#0BBD83',
-            position: [39.0, 35.0],
-            percentage: '48%, 25%',
-            description: 'Турецкая Республика'
+            position: [40.0, 45.0],
+            tons: 1465,
+            percentage: '3,33%',
+            description: 'Республика Армения'
         },
 
         // Россия
@@ -116,28 +145,21 @@ const InteractiveLeafletMapClient = () => {
             name: 'Россия',
             color: '#0BBD83',
             position: [60.0, 100.0],
-            percentage: '50%, 15%',
+            tons: 3167,
+            percentage: '7,21%',
             description: 'Российская Федерация'
         },
 
-        // Европа
+        // Бангладеш
         {
-            id: 'DEU',
-            altIds: ['Germany', 'Германия'],
-            name: 'Европа (Германия)',
+            id: 'BGD',
+            altIds: ['Bangladesh', 'Бангладеш'],
+            name: 'Бангладеш',
             color: '#0BBD83',
-            position: [51.0, 10.0],
-            percentage: '42%, 20%',
-            description: 'Федеративная Республика Германия'
-        },
-        {
-            id: 'POL',
-            altIds: ['Poland', 'Польша'],
-            name: 'Европа (Польша)',
-            color: '#0BBD83',
-            position: [52.0, 20.0],
-            percentage: '42%, 20%',
-            description: 'Республика Польша'
+            position: [24.0, 90.0],
+            tons: 1098,
+            percentage: '2,50%',
+            description: 'Народная Республика Бангладеш'
         },
 
         // Египет
@@ -147,7 +169,8 @@ const InteractiveLeafletMapClient = () => {
             name: 'Египет',
             color: '#0BBD83',
             position: [26.0, 30.0],
-            percentage: '48%, 35%',
+            tons: 495,
+            percentage: '1,13%',
             description: 'Арабская Республика Египет'
         }
     ];
@@ -258,6 +281,9 @@ const InteractiveLeafletMapClient = () => {
             });
 
             // Добавляем всплывающее окно
+            const tonsDisplay = exportCountry.tons ? `${exportCountry.tons.toLocaleString('ru-RU')} тонн` : '';
+            const percentageDisplay = exportCountry.percentage ? exportCountry.percentage : '';
+
             layer.bindPopup(`
                 <div style="padding: 12px; font-family: Arial, sans-serif; min-width: 200px; max-width: 280px;">
                     <h3 style="margin: 0 0 8px 0; color: #005E77; font-size: 16px; font-weight: bold; line-height: 1.3;">
@@ -267,8 +293,18 @@ const InteractiveLeafletMapClient = () => {
                     <p style="margin: 0 0 8px 0; font-size: 13px; color: #666; font-style: italic; line-height: 1.4;">
                         ${exportCountry.description}
                     </p>
+                    ${tonsDisplay || percentageDisplay ? `
+                        <div style="margin: 8px 0; padding: 8px; background-color: #f5f5f5; border-radius: 4px;">
+                            ${tonsDisplay ? `<p style="margin: 0 0 4px 0; font-size: 13px; color: #005E77; font-weight: 600; line-height: 1.4;">
+                                Количество: ${tonsDisplay}
+                            </p>` : ''}
+                            ${percentageDisplay ? `<p style="margin: 0; font-size: 13px; color: #005E77; font-weight: 600; line-height: 1.4;">
+                                % в общем экспорте: ${percentageDisplay}
+                            </p>` : ''}
+                        </div>
+                    ` : ''}
                     <p style="margin: 0; font-size: 12px; color: #666; line-height: 1.4;">
-                        ${exportCountry.isMainSupplier ? 'Главный поставщик' : 'Активный регион экспорта Siyob Group Textile'}
+                        ${exportCountry.isMainSupplier ? 'Главный поставщик' : 'Активный регион экспорта <span style="color: #005E77; font-weight: 600;">Sifat Textile</span>'}
                     </p>
                 </div>
             `, {
@@ -344,36 +380,49 @@ const InteractiveLeafletMapClient = () => {
                     Нажмите на страну {isMobile ? 'в списке' : 'в списке или на карте'}, чтобы посмотреть детали
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
-                    {exportCountries.map((country) => (
-                        <div
-                            key={country.id}
-                            className={`flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 rounded-lg transition-all duration-300 cursor-pointer active:scale-95 ${
-                                selectedRegion?.id === country.id
-                                    ? 'bg-white shadow-md border-2 border-[#0BBD83]'
-                                    : 'hover:bg-white hover:shadow-sm border border-transparent'
-                            }`}
-                            onClick={() => handleRegionClick(country)}
-                        >
-                            <div
-                                className="w-3 h-3 sm:w-4 sm:h-4 rounded-full flex-shrink-0"
-                                style={{ backgroundColor: country.color }}
-                            />
-                            <div className="flex-1 min-w-0">
-                                <span className="text-xs sm:text-sm font-medium text-gray-700 block truncate">
-                                    {country.name}
-                                    {country.isMainSupplier && (
-                                        <span className="ml-1 sm:ml-2 text-gray-500">★</span>
-                                    )}
-                                </span>
-                                {country.isMainSupplier && (
-                                    <span className="text-[10px] sm:text-xs text-gray-500 italic block">
-                                        Главный поставщик
-                                    </span>
-                                )}
-                            </div>
-                        </div>
-                    ))}
+                {/* Таблица стран экспорта */}
+                <div className="overflow-x-auto">
+                    <table className="w-full border-collapse">
+                        <thead>
+                            <tr className="bg-[#005E77] text-white">
+                                <th className="px-3 sm:px-4 py-2 sm:py-3 text-left text-xs sm:text-sm font-semibold border border-gray-300">Страна экспорта</th>
+                                <th className="px-3 sm:px-4 py-2 sm:py-3 text-right text-xs sm:text-sm font-semibold border border-gray-300">Количество, Тонн</th>
+                                <th className="px-3 sm:px-4 py-2 sm:py-3 text-right text-xs sm:text-sm font-semibold border border-gray-300">в общем экспорте</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {exportCountries
+                                .filter(country => !country.isMainSupplier && country.tons)
+                                .sort((a, b) => b.tons - a.tons)
+                                .map((country) => (
+                                <tr
+                                    key={country.id}
+                                    className={`cursor-pointer transition-all duration-200 ${
+                                        selectedRegion?.id === country.id
+                                            ? 'bg-[#0BBD83]/20 border-2 border-[#0BBD83]'
+                                            : 'hover:bg-white hover:shadow-sm'
+                                    }`}
+                                    onClick={() => handleRegionClick(country)}
+                                >
+                                    <td className="px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm font-medium text-gray-700 border border-gray-300">
+                                        <div className="flex items-center gap-2">
+                                            <div
+                                                className="w-3 h-3 rounded-full flex-shrink-0"
+                                                style={{ backgroundColor: country.color }}
+                                            />
+                                            {country.name}
+                                        </div>
+                                    </td>
+                                    <td className="px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-right text-gray-700 border border-gray-300">
+                                        {country.tons.toLocaleString('ru-RU')}
+                                    </td>
+                                    <td className="px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-right text-[#005E77] font-semibold border border-gray-300">
+                                        {country.percentage}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
 
                 {/* Информация о выбранной стране */}
@@ -388,8 +437,26 @@ const InteractiveLeafletMapClient = () => {
                         <p className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-3 italic">
                             {selectedRegion.description}
                         </p>
+                        {(selectedRegion.tons || selectedRegion.percentage) && (
+                            <div className="mb-3 p-3 bg-gray-50 rounded-lg">
+                                {selectedRegion.tons && (
+                                    <p className="text-sm sm:text-base text-[#005E77] font-semibold mb-1">
+                                        Количество: {selectedRegion.tons.toLocaleString('ru-RU')} тонн
+                                    </p>
+                                )}
+                                {selectedRegion.percentage && (
+                                    <p className="text-sm sm:text-base text-[#005E77] font-semibold">
+                                        % в общем экспорте: {selectedRegion.percentage}
+                                    </p>
+                                )}
+                            </div>
+                        )}
                         <p className="text-xs sm:text-sm text-gray-600">
-                            {selectedRegion.isMainSupplier ? 'Главный поставщик' : 'Активный регион экспорта Siyob Group Textile'}
+                            {selectedRegion.isMainSupplier ? 'Главный поставщик' : (
+                                <>
+                                    Активный регион экспорта <span className="font-semibold text-[#005E77]">Sifat Textile</span>
+                                </>
+                            )}
                         </p>
                     </div>
                 )}

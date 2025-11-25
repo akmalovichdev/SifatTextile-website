@@ -34,6 +34,53 @@
   animation: float infinite ease-in-out;
 }
 
+/* Анимации для модальных окон */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.3s ease-out;
+}
+
+/* Оптимизация производительности слайдера */
+.will-change-transform {
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Оптимизация для плавной анимации слайдов */
+.transition-transform {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
 /* Управление z-index для основных элементов */
 header {
   z-index: 9998 !important;
@@ -47,4 +94,88 @@ main {
 footer {
   position: relative;
   z-index: 10;
+}
+
+/* Удаление правила .pt-20 */
+.pt-20 {
+  padding-top: 0 !important;
+}
+
+/* Оптимизация для всех размеров экрана - предотвращение перекрытия текста изображением */
+/* Mobile (до 640px) */
+@media (max-width: 639px) {
+  #hero .relative.z-10 {
+    max-width: 90% !important;
+    padding-right: 0 !important;
+  }
+
+  #hero .absolute img {
+    right: -250px !important;
+    width: 400px !important;
+  }
+}
+
+/* Small screens (640px - 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+  #hero .relative.z-10 {
+    max-width: 450px !important;
+    padding-right: 20px !important;
+  }
+
+  #hero .absolute img {
+    right: -150px !important;
+    width: 550px !important;
+  }
+}
+
+/* Medium screens (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #hero .relative.z-10 {
+    max-width: 500px !important;
+    padding-right: 30px !important;
+  }
+
+  #hero .absolute img {
+    right: -120px !important;
+    width: 650px !important;
+  }
+}
+
+/* Large screens (1024px - 1366px) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  #hero .relative.z-10 {
+    max-width: 520px !important;
+    padding-right: 40px !important;
+  }
+
+  #hero .absolute img {
+    right: -140px !important;
+    width: 700px !important;
+  }
+}
+
+/* Extra large screens (1367px - 1440px) */
+@media (min-width: 1367px) and (max-width: 1440px) {
+  #hero .relative.z-10 {
+    max-width: 580px !important;
+    padding-right: 50px !important;
+  }
+
+  #hero .absolute img {
+    right: -100px !important;
+    width: 900px !important;
+  }
+}
+
+/* 2XL screens (1441px и выше) */
+@media (min-width: 1441px) {
+  #hero .relative.z-10 {
+    max-width: 650px !important;
+    padding-right: 60px !important;
+  }
+
+  #hero .absolute img {
+    right: -80px !important;
+    width: 1100px !important;
+  }
 }

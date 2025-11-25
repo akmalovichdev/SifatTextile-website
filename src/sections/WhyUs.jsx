@@ -17,17 +17,25 @@ const WhyUs = () => {
 
     return (
         <div>
-            <section id="WhyUs" className="py-16 md:py-24 bg-[#005E77] text-white">
+            <section id="WhyUs" className="py-14 sm:py-16 md:py-20 lg:py-24 bg-[#005E77] text-white">
                 <div className="max-w-[1920px] mx-auto px-5 sm:px-5 md:px-7 lg:px-[50px] 2xl:px-[100px]">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-[60px] text-center md:text-left">
+                    <h2 className="text-3xl sm:text-[36px] md:text-4xl lg:text-[42px] font-bold mb-10 sm:mb-12 md:mb-14 lg:mb-[60px] text-center md:text-left">
                         {t("whyUs.title")}
                     </h2>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 md:gap-14 lg:gap-16">
                         {/* Левая часть */}
-                        <div className="space-y-[50px]">
-                            <p className="text-white/90 leading-relaxed text-base sm:text-lg md:text-xl font-normal whitespace-pre-line">
-                                {t("whyUs.mainText")}
+                        <div className="space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-[50px]">
+                            <p className="text-white/90 leading-relaxed text-base sm:text-lg md:text-xl lg:text-xl font-normal whitespace-pre-line">
+                                {t("whyUs.mainText").split(/(Sifat Textile)/gi).map((part, index) =>
+                                    part.toLowerCase() === 'sifat textile' ? (
+                                        <React.Fragment key={index}>
+                                            <span className="font-semibold text-[#0BBD83]">Sifat Textile</span>
+                                        </React.Fragment>
+                                    ) : (
+                                        <React.Fragment key={index}>{part}</React.Fragment>
+                                    )
+                                )}
                             </p>
 
                             <div className="relative rounded-lg overflow-hidden aspect-video w-full max-w-[793px] mx-auto md:mx-0">
@@ -41,16 +49,11 @@ const WhyUs = () => {
                                     // Плейсхолдер (например, серая заливка или скелет)
                                     <div className="w-full h-full bg-gray-300 animate-pulse" />
                                 )}
-                                <button className="absolute inset-0 flex items-center justify-center group">
-                                    <div className="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-white/90 flex items-center justify-center group-hover:bg-white transition-colors">
-                                        <div className="w-0 h-0 border-t-[10px] sm:border-t-[12px] border-t-transparent border-l-[18px] sm:border-l-[20px] border-l-teal-900 border-b-[10px] sm:border-b-[12px] border-b-transparent ml-1"></div>
-                                    </div>
-                                </button>
                             </div>
                         </div>
 
                         {/* Правая часть */}
-                        <div className="space-y-10 md:space-y-12">
+                        <div className="space-y-8 sm:space-y-10 md:space-y-12">
                             {[
                                 {
                                     img: "/Icons/Vector.png",
@@ -73,12 +76,18 @@ const WhyUs = () => {
                                     text: t("whyUs.international"),
                                 },
                             ].map(({ img, text }, i) => (
-                                <div key={i} className="flex gap-4 items-start">
-                                    <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg">
-                                        <img src={img} alt="" className="max-w-[44px] max-h-[44px]" />
+                                <div key={i} className="flex gap-3 sm:gap-4 items-start">
+                                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-lg">
+                                        <img src={img} alt="" className="max-w-[40px] max-h-[40px] sm:max-w-[44px] sm:max-h-[44px]" />
                                     </div>
-                                    <p className="text-white/90 leading-relaxed text-base sm:text-lg md:text-xl font-normal">
-                                        {text}
+                                    <p className="text-white/90 leading-relaxed text-base sm:text-lg md:text-xl lg:text-xl font-normal">
+                                        {text.split(/(Sifat Textile)/gi).map((part, index) =>
+                                            part.toLowerCase() === 'sifat textile' ? (
+                                                <span key={index} className="font-semibold text-[#0BBD83]">Sifat Textile</span>
+                                            ) : (
+                                                part
+                                            )
+                                        )}
                                     </p>
                                 </div>
                             ))}

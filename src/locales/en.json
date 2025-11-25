@@ -14,36 +14,91 @@
   },
   "about": {
     "title": "About Us",
-    "description1": "Siyob Group Textile is a dynamically developing textile company from Samarkand, specializing in cotton yarn production. We unite three modern factories that work in a unified system and allow us to produce goods in demand both in domestic and international markets.",
-    "description2": "Each of our factories is equipped with equipment from leading world manufacturers, ensuring stable quality and product compliance with international standards. We produce a wide range of cotton yarns for different segments of the textile industry - from knitwear to premium fabrics. We believe that success is built on a combination of three factors: quality raw materials, modern technology and a professional approach.",
+    "description1": "Sifat Textile is a production leader shaping quality standards for cotton yarn in Uzbekistan. We unite three next-generation factories operating on a unified technological cycle. This structure enables us to provide partners with stable products that meet the expectations of the global market.",
+    "description2": "Each factory is equipped with equipment from top European and Asian brands. This gives us precision in every yarn parameter, control at all stages, and the ability to produce an assortment that meets the requirements of both mass and premium segments of the textile industry. We build our approach on three key principles: raw material purity, technological excellence, and professional responsibility. This allows us to provide partners with yarn that has predictable parameters, stable structure, and long service life of products. Sifat Textile - when yarn becomes a standard of trust.",
     "btnLearn": "Learn More"
   },
   "products": {
     "title": "Our Products",
     "search": "Search products...",
-    "viewMore": "View Details",
+    "viewMore": "Description",
+    "application": "Application",
     "features": "Features",
     "showAll": "Show All",
-    "hideAll": "Hide All"
+    "hideAll": "Hide All",
+    "range": "Range",
+    "thickness": "Thread Thickness",
+    "yarnType": "Yarn Type",
+    "spinningType": "Spinning Type",
+    "cottonYarnRange": "Ne 6/1 – Ne 40/1",
+    "slubYarn": "Slub Yarn",
+    "lycraYarn": "Lycra & Dual Core Yarn (Elastic Yarn)",
+    "yarnCodes": "Yarn Codes for Quick Search",
+    "code": "Code",
+    "description": "Description",
+    "example": "Search Example",
+    "veryThick": "Very Thick",
+    "thick": "Thick",
+    "medium": "Medium",
+    "mediumThin": "Medium-Thin",
+    "thin": "Thin",
+    "veryThin": "Very Thin",
+    "close": "Close",
+    "applications": {
+      "cotton": {
+        "6-10": "Jeans (weft), terry towels, special fabric, blankets",
+        "12-16": "Dense knitwear, uniforms, workwear",
+        "18-20": "T-shirts, sweatshirts, dense knitwear",
+        "24-30": "Knitwear, bed linen, pajamas, Single Jersey fabrics",
+        "32-36": "Shirt fabrics, light knitwear",
+        "40": "Premium knitwear, shirt fabrics, satin"
+      },
+      "slub": {
+        "6-10": "Denim fabric (weft), dense casual knitwear",
+        "12-16": "Denim, work fabrics, thick knitwear",
+        "18-24": "Knitwear, T-shirts, pajamas, home textiles",
+        "26-30": "Premium knitwear, decorative fabrics, fashion textiles"
+      },
+      "lycra": {
+        "6-10": "Stretch denim (weft), workwear",
+        "12-16": "Denim fabric, elastic knitwear",
+        "18-20": "Stretch poplin, shirt fabrics, slim fit clothing"
+      }
+    },
+    "yarnCodesTable": {
+      "cardedRingSpun": "Carded Ring Spun",
+      "cardedRingSpunDesc": "Carded cotton yarn (core assortment)",
+      "combedRingSpun": "Combed Ring Spun",
+      "combedRingSpunDesc": "Combed yarn of improved quality",
+      "compactSpun": "Compact Spun",
+      "compactSpunDesc": "Compact yarn (premium segment)",
+      "slubYarn": "Slub Yarn",
+      "slubYarnDesc": "Slub yarn with thickenings (texture effect)",
+      "lycraCoreSpun": "Lycra Core Spun",
+      "lycraCoreSpunDesc": "Elastic yarn with lycra (stretch)",
+      "dualCoreYarn": "Dual Core Yarn",
+      "dualCoreYarnDesc": "Dual core: Polyester + Lycra"
+    }
   },
   "whyUs": {
     "title": "Why Us",
-    "mainText": "High quality textile products by international standards.\nSiyob Group Textile uses modern production technology and strict quality\ncontrol, which allows customers to receive products that meet world requirements.",
+    "mainText": "High quality textile products by international standards.\nSifat Textile uses modern production technology and strict quality\ncontrol, which allows customers to receive products that meet world requirements.",
     "quality": "Quality - only verified raw materials and strict control at all stages.",
-    "reliability": "Reliability - long-term partnerships and compliance with delivery dates.",
+    "reliability": "Reliability - certified EN ISO 17050-1, OEKO-TEX STANDARD 100.",
     "openness": "Openness - honest terms and transparent cooperation with clients and partners.",
     "delivery": "Reliable delivery times - built logistics and experienced management guarantee timely product delivery.",
-    "international": "International trust - Siyob Group Textile cooperates with foreign partners and has proven itself as a stable and reliable manufacturer."
+    "international": "International trust - Sifat Textile cooperates with foreign partners and has proven itself as a stable and reliable manufacturer."
   },
   "productions": {
     "title": "Our Productions",
-    "viewMore": "View Details",
+    "viewMore": "Description",
     "surxonDesc": "Specializes in KCD and KCM yarn.",
     "maroqandDesc": "Produces a wide range: Carded Ring Spun, Open End, Slub yarn, Lycra and Dual Core",
     "kamalakDesc": "Focuses on KCD and KW yarn."
   },
   "news": {
-    "title": "News"
+    "title": "News",
+    "readMore": "Read More"
   },
   "contact": {
     "title": "Contact Us",
@@ -52,7 +107,7 @@
   },
   "geography": {
     "title": "Geography",
-    "text": "Siyob Group Textile products are successfully supplied to the domestic market and exported to more than 10 countries, including: China, India, Pakistan, Iran, Egypt, Turkey and European countries. This confirms the high competitiveness and trust of international partners in our brand."
+    "text": "Sifat Textile products are successfully supplied to the domestic market and exported to more than 10 countries, including: China, India, Pakistan, Iran, Egypt, Turkey and European countries. This confirms the high competitiveness and trust of international partners in our brand."
   },
   "gallery": {
     "title": "Gallery",
@@ -82,7 +137,7 @@
     "quickLinks": "Quick Links",
     "surxon": "Surxon Sifat Textile",
     "maroqand": "Maroqand Sifat Textile",
-    "kamalak": "Kamalak Textile",
+    "kamalak": "Kamalak Invest Textile",
     "carded": "Carded",
     "combed": "Combed",
     "lycra": "Lycra",
@@ -91,12 +146,90 @@
     "call": "Call"
   },
   "surxon": {
-    "title": "Surxon"
+    "title": "Surxon",
+    "back": "Back",
+    "description1": "The SURXON SIFAT TEKSTIL plant was founded in 2018 and is located in the Surkhandarya region of Uzbekistan. The enterprise specializes in deep processing of cotton and production of high-quality cotton yarn. Production capacity includes 30,144 spindles, ensuring a full cycle of the spinning process. Annual yarn production reaches 12,000 tons.",
+    "description2": "More than 600 specialists work at the plant, a significant portion of whom are young qualified personnel, bringing energy and innovation to production development.",
+    "description3": "The main products of the enterprise are combed and carded ring-spun yarn in the range from Ne 6/1 to Ne 40/1. In addition, the plant produces special types of yarn, including Slub yarn — in the range from Ne 6/1 to Ne 30/1."
   },
   "maroqand": {
-    "title": "Maroqand"
+    "title": "Maroqand",
+    "back": "Back",
+    "description1": "The Maroqand Sifat Tekstil plant was founded in 2018 and is located in the Samarkand region of Uzbekistan. The main activity of the enterprise is deep processing of cotton and production of high-quality cotton yarn. Annual production exceeds 10,000 tons of yarn.",
+    "description2": "Main products: yarn in the range from Ne 6/1 to Ne 20/1. Special types of yarn, including: • Slub yarn — from Ne 6/1 to Ne 20/1. • Lycra and Dual Core — from Ne 6/1 to Ne 20/1.",
+    "description3": "More than 500 employees work at the enterprise, including experienced specialists from Uzbekistan, as well as invited foreign experts from Turkey and India, ensuring the implementation of international quality standards."
   },
   "kamalak": {
-    "title": "Kamalak"
+    "title": "Kamalak",
+    "back": "Back",
+    "description1": "The SAMARQAND KAMALAK INVEST TEKSTIL plant was founded in 2018 and is located in the Samarkand region, Uzbekistan. The production capacity of the enterprise is focused on deep processing of cotton and production of high-quality yarn. The spinning mill has 23,040 spindles installed, ensuring a stable process of twisting and yarn production. Annual production is about 8,000 tons of yarn. More than 600 specialists work at the enterprise, a significant portion of whom are young qualified personnel.",
+    "description2": "The main specialization of the plant is the production of cotton yarn: • Carded (with straight end) — in the range from Ne 6/1 to Ne 20/1; • Open End (with open end) — in the range from Ne 6/1 to Ne 20/1; • Slub — in the range from Ne 6/1 to Ne 30/1; • Lycra and Dual Core — in the range from Ne 6/1 to Ne 20/1."
+  },
+  "ourServises": {
+    "back": "Back",
+    "intro": "Sifat Textile offers a comprehensive range of services for partners in the textile industry:",
+    "servicesList1": "Carded and Combed Ring Spun (Ne 6/1 – Ne 40/1);",
+    "servicesList2": "Open End (Ne 6/1 – Ne 20/1);",
+    "servicesList3": "Slub, Lycra;",
+    "servicesList4": "Dual Core",
+    "features1": "We fulfill orders according to customer requirements: thickness, yarn type, form and type of packaging.",
+    "features2": "Reliable deliveries to China, Turkey, Egypt, Iran and European countries with full documentary support.",
+    "features3": "Multi-level control at all stages of production and compliance with international standards.",
+    "features4": "Personal consultations and support for each partner.",
+    "processTitle": "Cotton Yarn Production Process — Sifat Textile",
+    "processIntro": "At Sifat Textile, we produce yarn that meets international quality standards. Every stage of the process combines modern technologies, precise engineering, and strict control. This ensures high strength, stable parameters, and exceptional fiber purity.",
+    "process1Title": "1. Raw material reception and preparation",
+    "process1Text": "The process begins with selecting and evaluating cotton fiber. It is checked for length, purity, moisture, and grade. Only cotton that meets quality requirements proceeds further.",
+    "process2Title": "2. Cleaning and blending",
+    "process2Text": "Automated lines remove impurities and blend the cotton evenly. This ensures batch stability, which is critical for high‑quality yarn.",
+    "process3Title": "3. Opening",
+    "process3Text": "Modern opening machines gently separate fibers, creating a uniform airy mass. This enhances material structure and ensures smooth processing in later stages.",
+    "process4Title": "4. Carding",
+    "process4Text": "One of the key stages at Sifat Textile. Carding machines: align fibers, clean them up to 98%, form an even carded sliver. Here the foundation of strong and uniform yarn is formed.",
+    "process5Title": "5. Combing — for premium products",
+    "process5Text": "For Combed Compact yarn, the sliver undergoes combing. Short and weak fibers are removed, resulting in extremely clean, long‑fibered, and stable material.",
+    "process6Title": "6. Drawing and roving formation",
+    "process6Text": "Multiple slivers are combined, aligned, and stabilized. They then become roving — the intermediate material essential for perfect spinning.",
+    "process7Title": "7. Spinning with modern equipment",
+    "process7Text": "A major strength of Sifat Textile is the use of world‑class machinery. Spinning machines provide: uniform drafting, precise twist, low hairiness, high strength. Compact technology ensures a clean surface and consistent yarn parameters.",
+    "process8Title": "8. Winding and strict quality control",
+    "process8Text": "During winding, knots, thick places, and defects are removed. Each bobbin undergoes tests for: tensile strength, evenness, twist stability, humidity and purity. All processes comply with international standards.",
+    "process9Title": "9. Packaging and labeling",
+    "process9Text": "Finished yarn is pressed or vacuum‑packed, wrapped, and labeled according to customer requirements. Sifat Textile guarantees quality preservation at all stages of storage and transport.",
+    "process10Title": "",
+    "process10Text": "",
+    "processConclusion": "Why customers choose Sifat Textile: — Modern production technologies — Fiber purity and stability — International quality standards — High uniformity and strength — Strict control at every stage"
+  },
+  "contacts": {
+    "title": "Contacts",
+    "back": "Back",
+    "salesManagers": "Sales Managers",
+    "salesManager": "Sales Manager",
+    "procurementTitle": "Procurement Department",
+    "procurementDepartment": "Procurement Department"
+  },
+  "career": {
+    "title": "Career",
+    "back": "Back",
+    "vacancies": "Job Postings",
+    "vacanciesDescription": "We are constantly looking for talented professionals to develop our team. Check out open positions and join us!",
+    "viewVacancies": "View Vacancies",
+    "sendApplication": "Submit Application",
+    "feedback": "Feedback",
+    "feedbackDescription": "Want to join our team or have suggestions? Contact us!",
+    "sendFeedback": "Send Feedback"
+  },
+  "certificates": {
+    "title": "Certificates",
+    "back": "Back",
+    "noCertificates": "Certificates will be added soon."
+  },
+  "phoneModal": {
+    "title": "Contact Managers"
+  },
+  "vacancies": {
+    "title": "Vacancies",
+    "noVacancies": "There are currently no open vacancies",
+    "viewDetails": "View Details"
   }
 }

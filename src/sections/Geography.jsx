@@ -6,6 +6,19 @@ import InteractiveLeafletMap from '@/components/MapWrapper';
 const Geography = () => {
     const { t } = useLanguage();
 
+    // Функция для выделения "Sifat Textile" в тексте
+    const highlightSifatTextile = (text) => {
+        if (!text) return text;
+        const parts = text.split(/(Sifat Textile)/gi);
+        return parts.map((part, index) =>
+            part.toLowerCase() === 'sifat textile' ? (
+                <span key={index} className="font-semibold text-[#005E77]">Sifat Textile</span>
+            ) : (
+                part
+            )
+        );
+    };
+
     return (
         <div>
             <section id='Geography' className="bg-white py-16 sm:py-20 md:py-28 lg:py-36">
@@ -19,7 +32,7 @@ const Geography = () => {
                         {/* Текст */}
                         <div className="w-full max-w-[1660px]">
                             <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal text-black leading-relaxed sm:leading-loose text-center sm:text-justify">
-                                <span className="font-semibold">Siyob Group Textile</span> {t("geography.text")}
+                                {highlightSifatTextile(t("geography.text"))}
                             </p>
                         </div>
                     </div>

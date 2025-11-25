@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Footer, MainPage, Header, OurServises, Surxon, Maroqand, Kamalak } from "@index";
+import { Footer, MainPage, Header, OurServises, Surxon, Maroqand, Kamalak, Contacts, Career, Certificates } from "@index";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("MainPage");
@@ -10,13 +10,19 @@ export default function Home() {
       case "OurServises":
         return <OurServises />;
       case "Surxon":
-        return <Surxon />;
+        return <Surxon setActiveSection={setActiveSection} />;
       case "Maroqand":
-        return <Maroqand />;
+        return <Maroqand setActiveSection={setActiveSection} />;
       case "Kamalak":
-        return <Kamalak />;
+        return <Kamalak setActiveSection={setActiveSection} />;
+      case "Contacts":
+        return <Contacts setActiveSection={setActiveSection} />;
+      case "Career":
+        return <Career setActiveSection={setActiveSection} />;
+      case "Certificates":
+        return <Certificates setActiveSection={setActiveSection} />;
       default:
-        return <MainPage />;
+        return <MainPage setActiveSection={setActiveSection} />;
     }
   };
 

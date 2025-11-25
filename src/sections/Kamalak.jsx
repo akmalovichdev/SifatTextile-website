@@ -1,10 +1,13 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import ContactModal from "@/components/ContactModal";
 
-const Kamalak = () => {
+const Kamalak = ({ setActiveSection }) => {
   const { t } = useLanguage();
-  const [kamalak, setkamalak] = useState([]);
+  const [kamalak, setkamalak] = useState(null);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   useEffect(() => {
     // Имитируем запрос к базе данных через API
@@ -16,7 +19,24 @@ const Kamalak = () => {
 
   return (
     <div className="bg-white">
-      <section className="max-w-[1920px] mx-auto px-5 sm:px-5 md:px-7 lg:px-[50px] 2xl:px-[100px] mb-[80px] sm:mb-[100px] mt-[120px] sm:mt-[180px] lg:mt-[247px]">
+      {/* Кнопка "Назад" */}
+      <div className="max-w-[1920px] mx-auto px-5 sm:px-5 md:px-7 lg:px-[50px] 2xl:px-[100px] pt-[120px] sm:pt-[140px]">
+        <button
+          onClick={() => {
+            if (setActiveSection) {
+              setActiveSection("MainPage");
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }}
+          className="flex items-center gap-2 text-[#0BBD83] hover:text-[#0aa775] transition-colors duration-300 mb-4"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          <span className="text-base sm:text-lg font-medium">{t("kamalak.back")}</span>
+        </button>
+      </div>
+      <section className="max-w-[1920px] mx-auto px-5 sm:px-5 md:px-7 lg:px-[50px] 2xl:px-[100px] mb-[80px] sm:mb-[100px] mt-[20px] sm:mt-[40px]">
         <div
           className="
         flex flex-col
@@ -29,77 +49,76 @@ const Kamalak = () => {
           <div className="max-w-[832px] text-black font-normal leading-relaxed text-center 2xl:text-left">
             <div>
               <h1 className="font-bold text-[28px] sm:text-[38px] md:text-[46px] lg:text-[55px] text-[#005E77] mb-6 sm:mb-[35px] break-words">
-                Kamalak Tekstil
+                Kamalak Invest Tekstil
               </h1>
             </div>
 
             <div className="font-normal text-sm sm:text-base md:text-lg lg:text-xl flex flex-col gap-5 text-black">
               <p className="text-justify">
-                Завод SAMARQAND KAMALAK INVEST TEKSTIL был основан в 2018 году и расположен в Самаркандской области, Узбекистан. Производственные мощности предприятия ориентированы на глубокую переработку хлопка и выпуск высококачественной пряжи. На прядильной фабрике установлено
-                23 040 шпинделей, обеспечивающих стабильный процесс скручивания и производства пряжи. Годовой объём выпуска составляет около 8 000 тонн пряжи. <br />
-                На предприятии трудятся более 600 специалистов, среди которых значительную часть составляют молодые квалифицированные кадры.
+                {t("kamalak.description1")}
               </p>
 
               <p className="text-justify">
-                Основная специализация завода — производство хлопчатобумажной пряжи:<br />
-                • Carded (с прямым концом) — в диапазоне от Ne 6/1 до Ne 20/1;<br />
-                • Open End (с открытым концом) — в диапазоне от Ne 6/1 до Ne 20/1;<br />
-                • Slub — в диапазоне от Ne 6/1 до Ne 30/1;<br />
-                • Lycra и Dual Core — в диапазоне от Ne 6/1 до Ne 20/1.<br />
+                {t("kamalak.description2")}
               </p>
             </div>
 
             <div className="flex justify-center [@media(min-width:1651px)]:justify-start">
               <button
+                onClick={() => setIsContactModalOpen(true)}
                 className="bg-[#0BBD83] hover:bg-teal-700 text-white
             px-5 py-3 sm:px-6 sm:py-4 rounded-[10px]
             text-sm sm:text-lg md:text-xl font-medium mt-[40px] sm:mt-[55px]
-            whitespace-nowrap transition-all duration-300"
+            whitespace-nowrap transition-all duration-300 cursor-pointer"
               >
                 {t("contact.btn")}
               </button>
             </div>
           </div>
 
-          {/* --- Изображение --- */}
-          <div
-            className="
+          {/* --- Видео ролики --- */}
+          <div className="w-full max-w-[700px] sm:max-w-[747px] flex-shrink-0">
+            <div
+              className="
           relative
           w-full
-          max-w-[700px]
-          sm:max-w-[747px]
           h-[250px] sm:h-[320px] md:h-[400px] lg:h-[465px]
           rounded-lg overflow-hidden shadow-lg
           transition-all duration-500 ease-in-out
-          flex-shrink-0
         "
-          >
-            {kamalak ? (
-              <img
-                src={kamalak.video}
-                alt="Factory Video"
-                className="w-full h-full object-cover transition-opacity duration-500"
-              />
-            ) : (
-              // Плейсхолдер (например, серая заливка или скелет)
-              <div className="w-full h-full bg-gray-300 animate-pulse" />
-            )}
-            <button className="absolute inset-0 flex items-center justify-center group">
-              <div
-                className="w-10 sm:w-14 md:w-16 h-10 sm:h-14 md:h-16 rounded-full bg-white/90
-            flex items-center justify-center
-            group-hover:bg-white transition-colors duration-300"
-              >
-                <div
-                  className="w-0 h-0 border-t-[6px] sm:border-t-[9px] md:border-t-[10px] border-t-transparent
-              border-l-[10px] sm:border-l-[16px] md:border-l-[18px] border-l-teal-900
-              border-b-[6px] sm:border-b-[9px] md:border-b-[10px] border-b-transparent ml-1"
-                ></div>
+            >
+              {kamalak && kamalak.videos && kamalak.videos.length > 0 ? (
+                <img
+                  src={kamalak.videos[currentVideoIndex]}
+                  alt={`Factory Video ${currentVideoIndex + 1}`}
+                  className="w-full h-full object-cover transition-opacity duration-500"
+                />
+              ) : (
+                <div className="w-full h-full bg-gray-300 animate-pulse" />
+              )}
+            </div>
+            {/* Навигация по роликам */}
+            {kamalak && kamalak.videos && kamalak.videos.length > 1 && (
+              <div className="flex justify-center gap-2 mt-4">
+                {kamalak.videos.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentVideoIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      currentVideoIndex === index
+                        ? "bg-[#0BBD83] w-8"
+                        : "bg-gray-300 hover:bg-gray-400"
+                    }`}
+                    aria-label={`Показать видео ${index + 1}`}
+                  />
+                ))}
               </div>
-            </button>
+            )}
           </div>
         </div>
       </section>
+
+      <ContactModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
     </div>
 
   )

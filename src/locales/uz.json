@@ -14,36 +14,91 @@
   },
   "about": {
     "title": "Biz haqimizda",
-    "description1": "Siyob Group Tekstil - Samarqanddan kelib chiqqan, paxta ipi ishlab chiqarishga ixtisoslashgan dinamik rivojlanayotgan to'qimachilik kompaniyasi. Biz bitta tizimda ishlaydigan uchta zamonaviy fabrikani birlashtiramiz va mahalliy hamda xalqaro bozorlarda talabga ega bo'lgan mahsulotlarni ishlab chiqarishga imkon beradi.",
-    "description2": "Fabrikalarimizning har biri yetakchi dunyo ishlab chiqaruvchilarining jihozlari bilan jihozlangan, bu barqaror sifat va mahsulotning xalqaro me'yoriy talablarga mosligini ta'minlaydi. Biz turli to'qimachilik sanoati segmentlari uchun keng doiradagi paxta iplarini ishlab chiqaramiz - trikotajdan tortib premium matolargacha. Muvaffaqiyat uchta omilning kombinatsiyasiga asoslanadi: sifatli xom ashyo, zamonaviy texnologiya va professional yondashuv.",
+    "description1": "Sifat Textile - O'zbekistonda paxta ipi sifat standartlarini shakllantiradigan ishlab chiqarish yetakchisi. Biz bitta texnologik tsikl bo'yicha ishlaydigan uchta yangi avlod fabrikasini birlashtiramiz. Bunday tuzilish bizga hamkorlarimizni jahon bozori kutishlariga javob beradigan barqaror mahsulot bilan ta'minlash imkonini beradi.",
+    "description2": "Har bir fabrika yetakchi Yevropa va Osiyo brendlarining jihozlari bilan jihozlangan. Bu bizga ipning har bir parametridagi aniqligi, barcha bosqichlarda nazorat va ommaviy hamda premium segmentlar talablariga javob beradigan assortimentni ishlab chiqarish imkoniyatini beradi. Bizning yondashuvimiz uchta asosiy printsipga asoslanadi: xom ashyoning tozaligi, texnologik mukammallik va professional mas'uliyat. Bu bizga hamkorlarimizni bashorat qilinadigan parametrlar, barqaror tuzilish va uzoq muddatli xizmat qilish muddati bilan ip bilan ta'minlash imkonini beradi. Sifat Textile - ip ishonch standartiga aylanganda.",
     "btnLearn": "Ko'proq biling"
   },
   "products": {
     "title": "Bizning mahsulotlar",
     "search": "Mahsulotlarni qidirish...",
-    "viewMore": "Batafsil",
+    "viewMore": "Tavsif",
+    "application": "Qo'llash",
     "features": "Xususiyatlar",
     "showAll": "Hammasini ko'rsatish",
-    "hideAll": "Yashirish"
+    "hideAll": "Yashirish",
+    "range": "Diapazon",
+    "thickness": "Ip qalinligi",
+    "yarnType": "Ip turi",
+    "spinningType": "Iplanish turi",
+    "cottonYarnRange": "Ne 6/1 – Ne 40/1",
+    "slubYarn": "Slub Yarn (Slab-ip)",
+    "lycraYarn": "Lycra & Dual Core Yarn (Elastik ip)",
+    "yarnCodes": "Tezkor qidirish uchun ip kodlari",
+    "code": "Kod",
+    "description": "Tavsif",
+    "example": "Qidirish misoli",
+    "veryThick": "Juda qalin",
+    "thick": "Qalin",
+    "medium": "O'rtacha",
+    "mediumThin": "O'rtacha-yupqa",
+    "thin": "Yupqa",
+    "veryThin": "Juda yupqa",
+    "close": "Yopish",
+    "applications": {
+      "cotton": {
+        "6-10": "Jinslar (tuk), terri sochiqlar, maxsus mato, ko'rpalar",
+        "12-16": "Zich trikotaj, forma, ish kiyimlari",
+        "18-20": "Futbolkalar, svitshotlar, zich trikotaj",
+        "24-30": "Trikotaj, choyshab, pijamalar, Single Jersey matolar",
+        "32-36": "Ko'ylak matolari, yengil trikotaj",
+        "40": "Premium trikotaj, ko'ylak matolari, satin"
+      },
+      "slub": {
+        "6-10": "Jins mato (tuk), zich kazual trikotaj",
+        "12-16": "Denim, ish matolari, qalin trikotaj",
+        "18-24": "Trikotaj, futbolkalar, pijamalar, uy to'qimachiligi",
+        "26-30": "Premium trikotaj, dekorativ matolar, moda to'qimachilik"
+      },
+      "lycra": {
+        "6-10": "Stretch denim (tuk), ish kiyimlari",
+        "12-16": "Jins mato, elastik trikotaj",
+        "18-20": "Stretch poplin, ko'ylak matolari, slim fit kiyimlar"
+      }
+    },
+    "yarnCodesTable": {
+      "cardedRingSpun": "Carded Ring Spun",
+      "cardedRingSpunDesc": "Kardli paxta ipi (asosiy assortiment)",
+      "combedRingSpun": "Combed Ring Spun",
+      "combedRingSpunDesc": "Yaxshilangan sifatli taroqli ip",
+      "compactSpun": "Compact Spun",
+      "compactSpunDesc": "Kompakt ip (premium segment)",
+      "slubYarn": "Slub Yarn",
+      "slubYarnDesc": "Qalinlashuvlar bilan slab-ip (tekstura effekti)",
+      "lycraCoreSpun": "Lycra Core Spun",
+      "lycraCoreSpunDesc": "Lykra bilan elastik ip (stretch)",
+      "dualCoreYarn": "Dual Core Yarn",
+      "dualCoreYarnDesc": "Ikki yadro: Polyester + Lycra"
+    }
   },
   "whyUs": {
     "title": "Nima uchun biz",
-    "mainText": "Xalqaro standartlar bo'yicha yuqori sifatli to'qimachilik mahsulotlari.\nSiyob Group Tekstil zamonaviy ishlab chiqarish texnologiyasi va qat'iy sifat\nkontrolidan foydalanadi, bu mijozlarga dunyo talablariga javob beradigan mahsulotlar olish imkonini beradi.",
+    "mainText": "Xalqaro standartlar bo'yicha yuqori sifatli to'qimachilik mahsulotlari.\nSifat Textile zamonaviy ishlab chiqarish texnologiyasi va qat'iy sifat\nkontrolidan foydalanadi, bu mijozlarga dunyo talablariga javob beradigan mahsulotlar olish imkonini beradi.",
     "quality": "Sifat - faqat tasdiqlangan xom ashyo va barcha bosqichlarda qat'iy nazorat.",
-    "reliability": "Ishonchlilik - uzoq muddatli hamkorlik va yetkazib berish muddatlariga rioya qilish.",
+    "reliability": "Ishonchlilik - EN ISO 17050-1, OEKO-TEX STANDARD 100 sertifikati mavjud.",
     "openness": "Ochiklik - shaffof shartlar va mijozlar va hamkorlar bilan shaffof hamkorlik.",
     "delivery": "Ishonchli yetkazib berish muddatlari - qurilgan logistika va tajribali boshqaruv mahsulotning o'z vaqtida yetkazib berilishini kafolatlaydi.",
-    "international": "Xalqaro ishonch - Siyob Group Tekstil xorijiy hamkorlar bilan hamkorlik qiladi va o'zini barqaror va ishonchli ishlab chiqaruvchi sifatida ko'rsatgan."
+    "international": "Xalqaro ishonch - Sifat Textile xorijiy hamkorlar bilan hamkorlik qiladi va o'zini barqaror va ishonchli ishlab chiqaruvchi sifatida ko'rsatgan."
   },
   "productions": {
     "title": "Bizning ishlab chiqarishlar",
-    "viewMore": "Batafsil",
+    "viewMore": "Tavsif",
     "surxonDesc": "KCD va KCM ipiga ixtisoslashgan.",
     "maroqandDesc": "Keng assortiment ishlab chiqaradi: Carded Ring Spun, Open End, Slub yarn, Lycra va Dual Core",
     "kamalakDesc": "KCD va KW ipiga qaratilgan."
   },
   "news": {
-    "title": "Yangiliklar"
+    "title": "Yangiliklar",
+    "readMore": "Batafsil"
   },
   "contact": {
     "title": "Biz bilan bog'lanish",
@@ -52,7 +107,7 @@
   },
   "geography": {
     "title": "Geografiya",
-    "text": "Siyob Group Tekstil mahsulotlari ichki bozorga muvaffaqiyatli yetkazib berilmoqda va 10 dan ortiq mamlakatlarga eksport qilinmoqda, jumladan: Xitoy, Hindiston, Pokiston, Eron, Misr, Turkiya va Yevropa mamlakatlari. Bu bizning brendimizga xalqaro hamkorlarning yuqori raqobatbardoshligi va ishonchini tasdiqlaydi."
+    "text": "Sifat Textile mahsulotlari ichki bozorga muvaffaqiyatli yetkazib berilmoqda va 10 dan ortiq mamlakatlarga eksport qilinmoqda, jumladan: Xitoy, Hindiston, Pokiston, Eron, Misr, Turkiya va Yevropa mamlakatlari. Bu bizning brendimizga xalqaro hamkorlarning yuqori raqobatbardoshligi va ishonchini tasdiqlaydi."
   },
   "gallery": {
     "title": "Galereya",
@@ -82,7 +137,7 @@
     "quickLinks": "Tezkor havolalar",
     "surxon": "Surxon Sifat Tekstil",
     "maroqand": "Maroqand Sifat Tekstil",
-    "kamalak": "Kamalak Tekstil",
+    "kamalak": "Kamalak Invest Tekstil",
     "carded": "Kardli",
     "combed": "Taroqli",
     "lycra": "Lykra",
@@ -91,12 +146,90 @@
     "call": "Qo'ng'iroq qilish"
   },
   "surxon": {
-    "title": "Surxon"
+    "title": "Surxon",
+    "back": "Orqaga",
+    "description1": "SURXON SIFAT TEKSTIL zavodi 2018-yilda tashkil etilgan va O'zbekistonning Surxondaryo viloyatida joylashgan. Korxona paxtani chuqur qayta ishlash va yuqori sifatli paxta ipi ishlab chiqarishga ixtisoslashgan. Ishlab chiqarish quvvati 30 144 ta vintni o'z ichiga oladi, bu ip yigirish jarayonining to'liq tsiklini ta'minlaydi. Yillik ip ishlab chiqarish 12 000 tonnaga yetadi.",
+    "description2": "Zavodda 600 dan ortiq mutaxassislar ishlaydi, ulardan katta qismi ishlab chiqarish rivojiga energiya va innovatsiyalar kiritadigan yosh malakali kadrlardir.",
+    "description3": "Korxonaning asosiy mahsulotlari Ne 6/1 dan Ne 40/1 gacha bo'lgan diapazonda taroqli va kardli halqali ip. Bundan tashqari, zavod maxsus ip turlarini, jumladan Ne 6/1 dan Ne 30/1 gacha bo'lgan diapazonda Slub-ipni ishlab chiqaradi."
   },
   "maroqand": {
-    "title": "Maroqand"
+    "title": "Maroqand",
+    "back": "Orqaga",
+    "description1": "Maroqand Sifat Tekstil zavodi 2018-yilda tashkil etilgan va O'zbekistonning Samarqand viloyatida joylashgan. Korxonaning asosiy faoliyati paxtani chuqur qayta ishlash va yuqori sifatli paxta ipi ishlab chiqarishdir. Yillik ishlab chiqarish 10 000 tonnadan oshadi.",
+    "description2": "Asosiy mahsulotlar: Ne 6/1 dan Ne 20/1 gacha bo'lgan diapazonda ip. Maxsus ip turlari, jumladan: • Slub yarn — Ne 6/1 dan Ne 20/1 gacha. • Lycra va Dual Core — Ne 6/1 dan Ne 20/1 gacha.",
+    "description3": "Korxonada 500 dan ortiq xodim ishlaydi, ular orasida O'zbekistondan tajribali mutaxassislar, shuningdek, xalqaro sifat standartlarini joriy etishni ta'minlaydigan Turkiya va Hindistondan taklif qilingan xorijiy ekspertlar bor."
   },
   "kamalak": {
-    "title": "Kamalak"
+    "title": "Kamalak",
+    "back": "Orqaga",
+    "description1": "SAMARQAND KAMALAK INVEST TEKSTIL zavodi 2018-yilda tashkil etilgan va O'zbekistonning Samarqand viloyatida joylashgan. Korxonaning ishlab chiqarish quvvati paxtani chuqur qayta ishlash va yuqori sifatli ip ishlab chiqarishga qaratilgan. Ip yigirish fabrikasida 23 040 ta vint o'rnatilgan, bu ipni burab ishlab chiqarish va ishlab chiqarishning barqaror jarayonini ta'minlaydi. Yillik ishlab chiqarish taxminan 8 000 tonna ip. Korxonada 600 dan ortiq mutaxassislar ishlaydi, ulardan katta qismi yosh malakali kadrlardir.",
+    "description2": "Zavodning asosiy ixtisosligi paxta ipi ishlab chiqarish: • Carded (to'g'ri uchi bilan) — Ne 6/1 dan Ne 20/1 gacha bo'lgan diapazonda; • Open End (ochiq uchi bilan) — Ne 6/1 dan Ne 20/1 gacha bo'lgan diapazonda; • Slub — Ne 6/1 dan Ne 30/1 gacha bo'lgan diapazonda; • Lycra va Dual Core — Ne 6/1 dan Ne 20/1 gacha bo'lgan diapazonda."
+  },
+  "ourServises": {
+    "back": "Orqaga",
+    "intro": "Sifat Textile to'qimachilik sanoati hamkorlari uchun keng qamrovli xizmatlar ko'rsatadi:",
+    "servicesList1": "Carded va Combed Ring Spun (Ne 6/1 – Ne 40/1);",
+    "servicesList2": "Open End (Ne 6/1 – Ne 20/1);",
+    "servicesList3": "Slub, Lycra;",
+    "servicesList4": "Dual Core",
+    "features1": "Biz mijoz talablariga mos keladigan buyurtmalarni bajaramiz: qalinlik, ip turi, shakl va qadoqlash turi.",
+    "features2": "Xitoy, Turkiya, Misr, Eron va Yevropa mamlakatlariga to'liq hujjatli qo'llab-quvvatlash bilan ishonchli yetkazib berish.",
+    "features3": "Ishlab chiqarishning barcha bosqichlarida ko'p darajali nazorat va xalqaro standartlarga mos kelish.",
+    "features4": "Har bir hamkor uchun shaxsiy maslahatlar va qo'llab-quvvatlash.",
+    "processTitle": "Paxta ipi ishlab chiqarish jarayoni — Sifat Textile",
+    "processIntro": "Sifat Textile xalqaro sifat standartlariga mos keladigan ip ishlab chiqaradi. Jarayonning har bir bosqichi zamonaviy texnologiyalar, aniq muhandislik va qat'iy sifat nazoratining uyg'unligidan iborat. Shu tufayli bizning iplarimiz yuqori mustahkamlik, barqaror parametrlar va tolalarning tozaligi bilan ajralib turadi.",
+    "process1Title": "1. Xom ashyoni qabul qilish va tayyorlash",
+    "process1Text": "Ish jarayoni paxta tolalarini saralash va baholashdan boshlanadi. Xom ashyo uzunlik, tozalik, namlik va nav bo'yicha tekshiriladi. Faqat standartlarga javob beruvchi paxta keyingi bosqichga yo'naltiriladi.",
+    "process2Title": "2. Tozalash va aralashtirish",
+    "process2Text": "Avtomatlashtirilgan liniyalarda paxta aralashmalar va mayda chiqindilardan tozalanadi hamda bir xil massaga keltiriladi. Bu ip sifatining barqarorligini ta'minlaydi.",
+    "process3Title": "3. Bo'shatish (Opening)",
+    "process3Text": "Zamonaviy bo'shatish mashinalari tolalarni ehtiyotlik bilan ajratib, bir xil havo tolasiga o'xshash massa hosil qiladi. Bu keyingi jarayonlarning sifatli o'tishini ta'minlaydi.",
+    "process4Title": "4. Kardlash (Carding)",
+    "process4Text": "Bu bosqich Sifat Textile uchun eng muhim jarayonlardan biridir. Kardlash mashinalarida tolalar: tekislanadi, 98% gacha tozalanadi, bir xil kard lenta shakliga keltiriladi. Shu bosqichda ipning mustahkam va sifatli bo'lishiga asos yaratiladi.",
+    "process5Title": "5. Tarash (Combed) — premium mahsulotlar uchun",
+    "process5Text": "Combed Compact mahsulotlari uchun lenta tarash jarayonidan o'tadi. Kichik va sifatga salbiy ta'sir qiluvchi tolalar olib tashlanadi. Natijada juda toza, uzun tolali, bir xil va barqaror lenta hosil bo'ladi.",
+    "process6Title": "6. Cho'zish va rovnitsa tayyorlash",
+    "process6Text": "Bir nechta lentalar birlashtiriladi, tekislanadi va barqarorlashtiriladi. Shundan so'ng ular rovnitsaga aylantiriladi — mukammal ip yigirish uchun zarur oraliq mahsulot.",
+    "process7Title": "7. Zamonaviy uskunalarda yigirish",
+    "process7Text": "Sifat Textile afzalliklaridan biri — dunyoning yetakchi brendlariga tegishli uskunalarda ishlashdir. Yigirish mashinalarida: bir xil cho'zilish, aniq buram, minimal tuklilik, yuqori mustahkamlik ta'minlanadi. Compact texnologiyasi silliq yuzani va barqaror parametrlarni kafolatlaydi.",
+    "process8Title": "8. O'rash va sifat nazorati",
+    "process8Text": "O'rash jarayonida tugunlar, notekis joylar va kamchiliklar avtomatik tarzda olib tashlanadi. Har bir bobin quyidagi sinovlardan o'tadi: uzilish kuchi, uzunlik bo'ylab bir xil taqsimlanish, buram barqarorligi, namlik va tozalik. Barcha jarayonlar xalqaro standartlar asosida amalga oshiriladi.",
+    "process9Title": "9. Qadoqlash va markirovka",
+    "process9Text": "Tayyor ip presslanadi yoki vakuumlanadi, himoya qoplami bilan o'raladi va mijoz talabiga ko'ra markirovka qilinadi. Sifat Textile mahsulot sifatining saqlanishini barcha bosqichlarda kafolatlaydi.",
+    "process10Title": "",
+    "process10Text": "",
+    "processConclusion": "Nima uchun Sifat Textile ipini tanlashadi: — Zamonaviy ishlab chiqarish texnologiyalari — Tolalarning tozaligi va barqarorligi — Xalqaro sifat standartlari — Yuqori bir xillik va mustahkamlik — Har bir bosqichda qat'iy nazorat"
+  },
+  "contacts": {
+    "title": "Kontaktlar",
+    "back": "Orqaga",
+    "salesManagers": "Savdo menejerlari",
+    "salesManager": "Savdo bo'limi menejeri",
+    "procurementTitle": "Xaridlar bo'limi",
+    "procurementDepartment": "Xaridlar bo'limi"
+  },
+  "career": {
+    "title": "Karyera",
+    "back": "Orqaga",
+    "vacancies": "Vakansiyalar",
+    "vacanciesDescription": "Biz doimiy ravishda jamoamizni rivojlantirish uchun iqtidorli mutaxassislarni qidiramiz. Ochiq vakansiyalarni ko'rib chiqing va bizga qo'siling!",
+    "viewVacancies": "Vakansiyalarni ko'rish",
+    "sendApplication": "Ariza yuborish",
+    "feedback": "Fikr-mulohaza",
+    "feedbackDescription": "Jamoamizga qo'shilmoqchimisiz yoki taklifingiz bormi? Biz bilan bog'laning!",
+    "sendFeedback": "Fikr-mulohaza yuborish"
+  },
+  "certificates": {
+    "title": "Sertifikatlar",
+    "back": "Orqaga",
+    "noCertificates": "Sertifikatlar tez orada qo'shiladi."
+  },
+  "phoneModal": {
+    "title": "Menejerlar bilan bog'lanish"
+  },
+  "vacancies": {
+    "title": "Vakansiyalar",
+    "noVacancies": "Hozirda ochiq vakansiyalar yo'q",
+    "viewDetails": "Batafsil"
   }
 }
